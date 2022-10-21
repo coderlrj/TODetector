@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DSToken__8.sol:128:9: Warning: Integer Overflow.\n        LogNote(msg.sig, msg.sender, foo, bar, msg.value, msg.data)\nInteger Overflow occurs if:\n    authority = 1\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DSToken__8.sol:128:9: Warning: Integer Underflow.\n        LogNote(msg.sig, msg.sender, foo, bar, msg.value, msg.data)\nInteger Underflow occurs if:\n    authority = 1\n    owner = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "99.8"
+}

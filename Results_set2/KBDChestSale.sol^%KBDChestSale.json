@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KBDChestSale.sol:199:7: Warning: Integer Overflow.\n      discountMapping[_id] = discount\nInteger Overflow occurs if:\n    _owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "66.4"
+}

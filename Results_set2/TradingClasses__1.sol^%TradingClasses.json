@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TradingClasses__1.sol:171:13: Warning: Integer Overflow.\n            info.index\nInteger Overflow occurs if:\n    _limit = 1\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TradingClasses__1.sol:147:5: Warning: Integer Overflow.\n    mapping(uint256 => Info) public table", 
+   "/oyente/oyente/test/ContractCodeBalance/TradingClasses__1.sol:194:9: Warning: Integer Overflow.\n        return array\nInteger Overflow occurs if:\n    return array = 3618502788666131106986593281521497120414687020801267626233049500247285301247"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TradingClasses__1.sol:193:5: Warning: Integer Underflow.\n    function getArray() external view returns (uint256[] memory) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return array = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TradingClasses__1.sol:180:34: Warning: Integer Underflow.\n            uint256 last = array[array.length - 1\nInteger Underflow occurs if:\n    owner = 0\n    array.length = 0\n    _limit = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "83.6"
+}

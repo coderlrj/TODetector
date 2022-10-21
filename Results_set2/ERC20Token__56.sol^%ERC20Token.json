@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Token__56.sol:107:35: Warning: Integer Overflow.\n if(!_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Token__56.sol:103:2: Warning: Integer Overflow.\n Approval(msg.sender, _spender, _value)", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Token__56.sol:101:2: Warning: Integer Overflow.\n function approveAndCall(address _spender, uint256 _value, bytes _extraData) returns (bool success) {\n ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _extraData = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Token__56.sol:103:2: Warning: Integer Underflow.\n Approval(msg.sender, _spender, _value)"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "53.0"
+}

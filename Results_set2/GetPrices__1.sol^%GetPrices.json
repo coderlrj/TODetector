@@ -1,0 +1,26 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:186:39: Warning: Integer Overflow.\n       uint256 currentPriceUniswap =  orfeed.getExchangeRate(\"WETH\", \"BAT\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:175:39: Warning: Integer Overflow.\n       uint256 currentPriceUniswap =  orfeed.getExchangeRate(\"WETH\", \"LINK\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:127:9: Warning: Integer Overflow.\n        daiToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:159:37: Warning: Integer Overflow.\n       uint256 currentPriceKyber =  orfeed.getExchangeRate(\"WETH\", \"PAX\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:152:39: Warning: Integer Overflow.\n       uint256 currentPriceUniswap =  orfeed.getExchangeRate(\"WETH\", \"WBTC\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:139:39: Warning: Integer Overflow.\n       uint256 currentPriceUniswap =  orfeed.getExchangeRate(\"WETH\", \"USDC\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:164:39: Warning: Integer Overflow.\n       uint256 currentPriceUniswap =  orfeed.getExchangeRate(\"WETH\", \"PAX\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:170:37: Warning: Integer Overflow.\n       uint256 currentPriceKyber =  orfeed.getExchangeRate(\"WETH\", \"LINK\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:181:37: Warning: Integer Overflow.\n       uint256 currentPriceKyber =  orfeed.getExchangeRate(\"WETH\", \"BAT\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:134:37: Warning: Integer Overflow.\n       uint256 currentPriceKyber =  orfeed.getExchangeRate(\"WETH\", \"USDC\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/GetPrices__1.sol:147:37: Warning: Integer Overflow.\n       uint256 currentPriceKyber =  orfeed.getExchangeRate(\"WETH\", \"WBTC\", \"KYBERBYSYMBOLV1\", 1000000000000000000)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.2"
+}

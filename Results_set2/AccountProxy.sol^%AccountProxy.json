@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AccountProxy.sol:16:18: Warning: Integer Underflow.\n            emit Received(msg.value, msg.sender, msg.data)"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "76.9"
+}

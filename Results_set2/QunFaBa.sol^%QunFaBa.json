@@ -1,0 +1,27 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:443:5: Warning: Integer Overflow.\n    function issueRefunds(address[] _addrs) public onlyOwner returns(bool) {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    maxDropsPerTx = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:450:17: Warning: Integer Overflow.\n                RefundIssued(_addrs[i], toRefund)\nInteger Overflow occurs if:\n    maxDropsPerTx = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    owner = 0\n    ethBalanceOf[_addrs[i]] = 57896044618658097711785492504343953926634992332820282019728792003956564819969", 
+   "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:503:5: Warning: Integer Overflow.\n    function multiValueAirdrop(address _addressOfToken,  address[] _recipients, uint256[] _values) public returns(bool) {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _recipients = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:443:5: Warning: Integer Underflow.\n    function issueRefunds(address[] _addrs) public onlyOwner returns(bool) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    owner = 0"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:449:17: Warning: Transaction-Ordering Dependency.\n                _addrs[i].transfer(toRefund)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/QunFaBa.sol:449:17: Warning: Transaction-Ordering Dependency.\n                _addrs[i].transfer(toRefund)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "78.2"
+}

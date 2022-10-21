@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/PriceFeed__1.sol:197:14: Warning: Integer Underflow.\n        emit LogNote(msg.sig, msg.sender, foo, bar, msg.value, msg.data)"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.9"
+}

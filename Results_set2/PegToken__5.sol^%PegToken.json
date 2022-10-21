@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/PegToken__5.sol:105:36: Warning: Integer Overflow.\n            uint256 dolToEthRate = orfeed.getExchangeRate(\"DAI\", \"ETH\", \"DEFAULT\", equityRate)\nInteger Overflow occurs if:\n    isMinting = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.2"
+}

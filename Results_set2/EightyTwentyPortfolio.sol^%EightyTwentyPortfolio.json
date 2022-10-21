@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/EightyTwentyPortfolio.sol:179:29: Warning: Integer Underflow.\n          uint usdcAmount = kyberProxy.tradeWithHint.value(ethAmount2)(eth, ethAmount2, usdc, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT)\nInteger Underflow occurs if:\n    kyberProxy.tradeWithHint.value(ethAmount1)(eth, ethAmount1, dai, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT) = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/EightyTwentyPortfolio.sol:178:28: Warning: Integer Underflow.\n          uint daiAmount = kyberProxy.tradeWithHint.value(ethAmount1)(eth, ethAmount1, dai, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT)\nInteger Underflow occurs if:\n    kyberProxy.tradeWithHint.value(ethAmount1)(eth, ethAmount1, dai, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT) = 1"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/EightyTwentyPortfolio.sol:178:28: Warning: Transaction-Ordering Dependency.\n          uint daiAmount = kyberProxy.tradeWithHint.value(ethAmount1)(eth, ethAmount1, dai, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/EightyTwentyPortfolio.sol:178:28: Warning: Transaction-Ordering Dependency.\n          uint daiAmount = kyberProxy.tradeWithHint.value(ethAmount1)(eth, ethAmount1, dai, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT)", 
+    "/oyente/oyente/test/ContractCodeBalance/EightyTwentyPortfolio.sol:179:29: Warning: Transaction-Ordering Dependency.\n          uint usdcAmount = kyberProxy.tradeWithHint.value(ethAmount2)(eth, ethAmount2, usdc, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000004, PERM_HINT)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "40.0"
+}

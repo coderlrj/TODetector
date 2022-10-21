@@ -1,0 +1,38 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1029:9: Warning: Timestamp Dependency.\n        if (now >= _officialsLedger[official]._decayTimestamp) {\n        ^\nSpanning multiple lines."
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1011:9: Warning: Integer Overflow.\n        address[] memory externalTokensForHolder = _ledgerExternalTokensAddresses[holder]\nInteger Overflow occurs if:\n    _ledgerExternalTokensAddresses[msg.sender].length = 3618502788666131106986593281521497120414687020801267626233049500247285301247\n    _minSignAmount = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    _officialsLedger[msg.sender]._amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:853:13: Warning: Integer Overflow.\n            _token.transferFrom(msg.sender, address(this), restOfTokens)\nInteger Overflow occurs if:\n    tokensAmount = 27992042416072687524494102977442349819058868148488002877005235593694616223745\n    _queueTownTokenRequests.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:870:34: Warning: Integer Overflow.\n                uint256 amount = _historyTransactions[msg.sender][i]\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    tokensAmount = 0\n    _queueTownTokenRequests.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1029:20: Warning: Integer Overflow.\n        if (now >= _officialsLedger[official]._decayTimestamp\nInteger Overflow occurs if:\n    _officialsLedger[msg.sender]._amount = 1\n    _minSignAmount = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:871:24: Warning: Integer Overflow.\n                delete _historyTransactions[msg.sender][i]\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    tokensAmount = 0\n    _queueTownTokenRequests.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:796:43: Warning: Integer Overflow.\n            tokenAmount = tokenAmount.add(_historyTransactions[msg.sender][i]._amount\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 1\n    _historyTransactions[msg.sender][i]._amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:795:33: Warning: Integer Overflow.\n            amount = amount.add(_historyTransactions[msg.sender][i]\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 2\n    _historyTransactions[msg.sender][i]._amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1043:9: Warning: Integer Overflow.\n        _officialsLedger[official] = info\nInteger Overflow occurs if:\n    _officialsLedger[official]._decayTimestamp = 1\n    _officialsLedger[official]._amount = 57896044618658097711785492504343953926634992332820282019728792003956564819969", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:795:81: Warning: Integer Overflow.\n            amount = amount.add(_historyTransactions[msg.sender][i]._amount.mul(_historyTransactions[msg.sender][i]\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 2\n    _historyTransactions[msg.sender][i]._amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:869:32: Warning: Integer Overflow.\n                uint256 rate = _historyTransactions[msg.sender][i]\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    tokensAmount = 0\n    _queueTownTokenRequests.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1031:13: Warning: Integer Overflow.\n            _officialsLedger[official] = info\nInteger Overflow occurs if:\n    _officialsLedger[msg.sender]._amount = 1\n    _officialsLedger[official]._decayTimestamp = 1\n    _minSignAmount = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:870:34: Warning: Integer Overflow.\n                uint256 amount = _historyTransactions[msg.sender][i]._amount\nInteger Overflow occurs if:\n    _historyTransactions[msg.sender].length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    tokensAmount = 0\n    _queueTownTokenRequests.length = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Town.sol:1127:32: Warning: Integer Underflow.\n        return _startRate.mul((now - 1579392000\nInteger Underflow occurs if:\n    _minSignAmount = 0"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Town.sol:1037:13: Warning: Transaction-Ordering Dependency.\n            official.transfer(amount)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Town.sol:1037:13: Warning: Transaction-Ordering Dependency.\n            official.transfer(amount)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "33.8"
+}

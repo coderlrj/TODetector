@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/StakeImperial.sol:60:9: Warning: Integer Overflow.\n        allStakes += stakedAmount\nInteger Overflow occurs if:\n    allStakes = 65188801208902294076802866881225697802126994098117077372840014782157694173184", 
+   "/oyente/oyente/test/ContractCodeBalance/StakeImperial.sol:51:16: Warning: Integer Overflow.\n        return sendtTransaction.balanceOf(msg.sender)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/StakeImperial.sol:69:32: Warning: Integer Underflow.\n        uint256 balanceTime = (now - timeinStake[msg.sender]\nInteger Underflow occurs if:\n    timeinStake[msg.sender] = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.0"
+}

@@ -1,0 +1,28 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:253:35: Warning: Integer Overflow.\n        for (uint i = b.length-1; i+1", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:213:5: Warning: Integer Overflow.\n    function newToken(\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    name = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:153:9: Warning: Integer Overflow.\n        require(curves[specifier] == 0, \"Curve specifier already exists\")\nInteger Overflow occurs if:\n    curves[specifier] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:231:7: Warning: Integer Overflow.\n      return curves_list\nInteger Overflow occurs if:\n    return curves_list = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:251:5: Warning: Integer Overflow.\n    function bytesToAddr (bytes b) public pure returns (address) {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    b = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:254:27: Warning: Integer Overflow.\n            uint c = uint(b[i]", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:156:9: Warning: Integer Overflow.\n        require(registry.isProviderInitiated(address(this)), \"Provider not intiialized\")\nInteger Overflow occurs if:\n    curves[specifier] = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:158:9: Warning: Integer Underflow.\n        registry.initiateProviderCurve(specifier, curve, address(this))\nInteger Underflow occurs if:\n    curves[specifier] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:253:23: Warning: Integer Underflow.\n        for (uint i = b.length-1", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:251:5: Warning: Integer Underflow.\n    function bytesToAddr (bytes b) public pure returns (address) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:255:41: Warning: Integer Underflow.\n            uint to_inc = c * ( 16 ** ((b.length - i", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenDotFactory.sol:230:5: Warning: Integer Underflow.\n    function getEndpoints() public view returns(bytes32[]){\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return curves_list = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "74.9"
+}

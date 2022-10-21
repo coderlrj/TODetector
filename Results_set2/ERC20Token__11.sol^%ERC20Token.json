@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Token__11.sol:147:5: Warning: Integer Overflow.\n    function editTokenProperties(string _name, string _symbol, int256 extraSupplay) onlyOwner public {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "52.2"
+}

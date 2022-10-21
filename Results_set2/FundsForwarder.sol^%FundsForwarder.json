@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/FundsForwarder.sol:153:22: Warning: Callstack Depth Attack Vulnerability.\n            result = address(bridge).call(\n            ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/FundsForwarder.sol:129:22: Warning: Callstack Depth Attack Vulnerability.\n            result = address(bridge).call.value(balance)(\n            ^\nSpanning multiple lines."
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/FundsForwarder.sol:220:21: Warning: Integer Overflow.\n            require(token.transfer(escapeHatchDestination, balance)\nInteger Overflow occurs if:\n    _token = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "59.2"
+}

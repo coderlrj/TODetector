@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCodeBalance/HTLC_ERC20_Token.sol:49:9: Warning: Timestamp Dependency.\n        require(now >= timeLock)"
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "89.0"
+}

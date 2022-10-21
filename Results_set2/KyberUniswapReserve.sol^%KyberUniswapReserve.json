@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:111:17: Warning: Integer Overflow.\n            if (alertersGroup[i]\nInteger Overflow occurs if:\n    admin = 0\n    alertersGroup[i] = 1\n    alertersGroup.length = 2\n    alerters[alerter] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:53:9: Warning: Integer Overflow.\n        return operatorsGroup\nInteger Overflow occurs if:\n    return operatorsGroup = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:136:17: Warning: Integer Overflow.\n            if (operatorsGroup[i]\nInteger Overflow occurs if:\n    admin = 0\n    operatorsGroup[i] = 1\n    operators[operator] = 2\n    operatorsGroup.length = 2", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:137:37: Warning: Integer Overflow.\n                operatorsGroup[i] = operatorsGroup[operatorsGroup.length - 1]\nInteger Overflow occurs if:\n    admin = 0\n    operatorsGroup[i] = 1\n    operatorsGroup[i] = 1\n    operators[operator] = 1\n    operatorsGroup.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    operatorsGroup[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:57:9: Warning: Integer Overflow.\n        return alertersGroup\nInteger Overflow occurs if:\n    return alertersGroup = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:112:36: Warning: Integer Overflow.\n                alertersGroup[i] = alertersGroup[alertersGroup.length - 1]\nInteger Overflow occurs if:\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alertersGroup[i] = 0\n    alertersGroup[i] = 1\n    alertersGroup.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    admin = 0\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alerters[alerter] = 1\n    alertersGroup[i] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:869:26: Warning: Integer Overflow.\n        return amount * (10000 + internalPricePremiumBps[token]\nInteger Overflow occurs if:\n    internalPricePremiumBps[token] = 115792089237316195423570985008687907853269984665640564039457584007913129629936\n    amount = 96479685716957800807006209"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:1:4: Warning: Integer Underflow.\n\nInteger Underflow occurs if:\n    return operatorsGroup = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:857:26: Warning: Integer Underflow.\n        return amount * (10000 - feeBps\nInteger Underflow occurs if:\n    dest = 1364068194842176056990105843868530818345537040110\n    tradeEnabled = 1\n    feeBps = 26385\n    srcQty = 1\n    src = 0\n    tokenExchange[address(src)] = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.6"
+}

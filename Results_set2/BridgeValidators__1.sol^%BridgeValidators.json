@@ -1,0 +1,37 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:191:38: Warning: Integer Overflow.\n        return boolStorage[keccak256(abi.encodePacked(\"validators\", _validator)\nInteger Overflow occurs if:\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0\n    _validator = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:182:5: Warning: Integer Overflow.\n    function requiredSignatures() public view returns(uint256) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:183:38: Warning: Integer Overflow.\n        return uintStorage[keccak256(abi.encodePacked(\"requiredSignatures\")\nInteger Overflow occurs if:\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:133:5: Warning: Integer Overflow.\n    function initialize(uint256 _requiredSignatures, address[] _initialValidators, address _owner)\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _initialValidators = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:102:5: Warning: Integer Overflow.\n    function owner() public view returns (address) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:199:28: Warning: Integer Overflow.\n        return boolStorage[keccak256(abi.encodePacked(\"isInitialized\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:103:41: Warning: Integer Overflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\")\nInteger Overflow occurs if:\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:186:5: Warning: Integer Overflow.\n    function validatorCount() public view returns(uint256) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:198:5: Warning: Integer Overflow.\n    function isInitialized() public view returns(bool) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:190:5: Warning: Integer Overflow.\n    function validators(address _validator) public view returns(bool) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:199:38: Warning: Integer Overflow.\n        return boolStorage[keccak256(abi.encodePacked(\"isInitialized\")", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:187:38: Warning: Integer Overflow.\n        return uintStorage[keccak256(abi.encodePacked(\"validatorCount\")\nInteger Overflow occurs if:\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:194:5: Warning: Integer Overflow.\n    function isValidator(address _validator) public view returns(bool) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:103:31: Warning: Integer Underflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:3:2: Warning: Integer Underflow.\n// File: contracts/IBr", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:199:28: Warning: Integer Underflow.\n        return boolStorage[keccak256(abi.encodePacked(\"isInitialized\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:187:28: Warning: Integer Underflow.\n        return uintStorage[keccak256(abi.encodePacked(\"validatorCount\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:191:28: Warning: Integer Underflow.\n        return boolStorage[keccak256(abi.encodePacked(\"validators\", _validator))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:1:23: Warning: Integer Underflow.\n", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:183:28: Warning: Integer Underflow.\n        return uintStorage[keccak256(abi.encodePacked(\"requiredSignatures\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/BridgeValidators__1.sol:8:14: Warning: Integer Underflow.\n    function owner() public view returns(ad"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "49.2"
+}

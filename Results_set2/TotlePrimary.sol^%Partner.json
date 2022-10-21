@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/TotlePrimary.sol:68:22: Warning: Callstack Depth Attack Vulnerability.\n        (success,) = _tokenAddress.call(abi.encodeWithSignature(\"transfer(address,uint256)\", _to, _value))"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "0.5"
+}

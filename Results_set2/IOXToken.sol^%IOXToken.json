@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/IOXToken.sol:203:14: Warning: Integer Overflow.\n        emit Approval(msg.sender, spender, tokens)\nInteger Overflow occurs if:\n    data = 4294966785", 
+   "/oyente/oyente/test/ContractCodeBalance/IOXToken.sol:221:16: Warning: Integer Overflow.\n        return ERC20Interface(tokenAddress).transfer(owner, tokens)\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/IOXToken.sol:129:16: Warning: Integer Underflow.\n        return _totalSupply - balances[address(0)]\nInteger Underflow occurs if:\n    _totalSupply = 0\n    balances[address(0)] = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "71.9"
+}

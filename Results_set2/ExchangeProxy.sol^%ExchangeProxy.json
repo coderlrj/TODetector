@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/ExchangeProxy.sol:290:24: Warning: Callstack Depth Attack Vulnerability.\n        (bool xfer,) = msg.sender.call.value(wethBalance)(\"\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ExchangeProxy.sol:252:28: Warning: Callstack Depth Attack Vulnerability.\n            (bool xfer,) = msg.sender.call.value(wethBalance)(\"\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ExchangeProxy.sol:215:24: Warning: Callstack Depth Attack Vulnerability.\n        (bool xfer,) = msg.sender.call.value(wethBalance)(\"\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ExchangeProxy.sol:177:28: Warning: Callstack Depth Attack Vulnerability.\n            (bool xfer,) = msg.sender.call.value(wethBalance)(\"\")"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "0.2"
+}

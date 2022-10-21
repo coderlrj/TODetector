@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/Gateway.sol:1407:24: Warning: Callstack Depth Attack Vulnerability.\n    (bool success, ) = address(_contractAddress).call(\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/Gateway.sol:791:51: Warning: Callstack Depth Attack Vulnerability.\n        (bool success, bytes memory returndata) = address(token).call(data)"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "1.2"
+}

@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AggregatorProxy.sol:145:12: Warning: Integer Overflow.\n    return aggregator.latestRound()", 
+   "/oyente/oyente/test/ContractCodeBalance/AggregatorProxy.sol:99:12: Warning: Integer Overflow.\n    return aggregator.latestAnswer()", 
+   "/oyente/oyente/test/ContractCodeBalance/AggregatorProxy.sol:134:12: Warning: Integer Overflow.\n    return aggregator.getTimestamp(_roundId)", 
+   "/oyente/oyente/test/ContractCodeBalance/AggregatorProxy.sol:110:12: Warning: Integer Overflow.\n    return aggregator.latestTimestamp()", 
+   "/oyente/oyente/test/ContractCodeBalance/AggregatorProxy.sol:122:12: Warning: Integer Overflow.\n    return aggregator.getAnswer(_roundId)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "97.0"
+}

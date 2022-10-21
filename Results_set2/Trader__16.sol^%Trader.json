@@ -1,0 +1,33 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:36:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:55:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:115:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:86:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:120:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:100:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:91:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:60:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:65:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:70:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:110:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:95:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:50:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"DAI\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:45:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:41:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:75:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:125:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"PAX\", \"BANCOR\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__16.sol:105:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"USDC\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.8"
+}

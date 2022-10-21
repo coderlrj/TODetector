@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Portfolio1__3.sol:168:30: Warning: Integer Overflow.\n            createdAmount2 = fInt2.mint(msg.sender, daiBack)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Portfolio1__3.sol:162:31: Warning: Transaction-Ordering Dependency.\n            uint256 daiBack = usi.ethToTokenSwapInput.value(loanAmountEth)(1, block.timestamp)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Portfolio1__3.sol:167:29: Warning: Transaction-Ordering Dependency.\n            createdAmount = fInt.mintWithEther.value(leverageAmountEth)(msg.sender, maxMint)", 
+    "/oyente/oyente/test/ContractCodeBalance/Portfolio1__3.sol:162:31: Warning: Transaction-Ordering Dependency.\n            uint256 daiBack = usi.ethToTokenSwapInput.value(loanAmountEth)(1, block.timestamp)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "95.2"
+}

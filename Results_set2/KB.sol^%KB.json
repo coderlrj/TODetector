@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KB.sol:124:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    balanceOf[_from] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    allowance[_from][msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0\n    _value = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "79.7"
+}

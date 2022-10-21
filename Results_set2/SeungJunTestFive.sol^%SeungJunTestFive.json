@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SeungJunTestFive.sol:149:9: Warning: Integer Underflow.\n        return _name\nInteger Underflow occurs if:\n    return _name = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/SeungJunTestFive.sol:153:9: Warning: Integer Underflow.\n        return _symbol\nInteger Underflow occurs if:\n    return _symbol = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.2"
+}

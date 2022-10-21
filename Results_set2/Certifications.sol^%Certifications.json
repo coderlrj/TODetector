@@ -1,0 +1,28 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:38:9: Warning: Integer Overflow.\n        require(isOwner(), \"Ownable: caller is not the owner\")\nInteger Overflow occurs if:\n    _owner = 0\n    _signature = 4294966801", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:147:5: Warning: Integer Overflow.\n    mapping(bytes32 => Certificate) public fingerprints", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:178:9: Warning: Integer Overflow.\n        fingerprints[_fingerprint].exists\nInteger Overflow occurs if:\n    _expires = 1\n    _owner = 0\n    fingerprints[_fingerprint].exists = 0\n    _issued = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:101:9: Warning: Integer Overflow.\n        require(_signature.length == 65, \"Invalid signature\")\nInteger Overflow occurs if:\n    _owner = 0\n    _signature = 4294965305", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:115:9: Warning: Integer Overflow.\n        require(v == 27 || v == 28, \"Invalid signature\")\nInteger Overflow occurs if:\n    _signature = 4294965305\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:202:16: Warning: Integer Overflow.\n        return fingerprints[_fingerprint].signatures", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:176:9: Warning: Integer Overflow.\n        fingerprints[_fingerprint].issued\nInteger Overflow occurs if:\n    _expires = 1\n    _owner = 0\n    fingerprints[_fingerprint].exists = 0\n    _issued = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:177:9: Warning: Integer Overflow.\n        fingerprints[_fingerprint].expires\nInteger Overflow occurs if:\n    _expires = 1\n    _owner = 0\n    fingerprints[_fingerprint].exists = 0\n    _issued = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:126:13: Warning: Integer Overflow.\n            abi.encodePacked(\"\\x19Ethereum Signed Message:\\n32\", _fingerprint)\nInteger Overflow occurs if:\n    _signature = 4294965563\n    _owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:115:9: Warning: Integer Underflow.\n        require(v == 27 || v == 28, \"Invalid signature\")\nInteger Underflow occurs if:\n    _signature = 4294967296\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:101:9: Warning: Integer Underflow.\n        require(_signature.length == 65, \"Invalid signature\")\nInteger Underflow occurs if:\n    _owner = 0\n    _signature = 4294901949", 
+   "/oyente/oyente/test/ContractCodeBalance/Certifications.sol:202:9: Warning: Integer Underflow.\n        return fingerprints[_fingerprint].signatures[_signer]\nInteger Underflow occurs if:\n    return fingerprints[_fingerprint].signatures[_signer] = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.1"
+}

@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/PZSHToken.sol:137:13: Warning: Integer Overflow.\n            holders.push(_to)\nInteger Overflow occurs if:\n    holders.push(_to) = 115792089237316195423570985008687907853269984665640564039457584007913129639935\n    holdersMap[_to] = 0\n    _value = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/PZSHToken.sol:169:13: Warning: Integer Overflow.\n            holders.push(_to)\nInteger Overflow occurs if:\n    holdersMap[_to] = 0\n    allowed[_from][msg.sender] = 115792089237316195423570985008687907853269984665640564039457584007913129639935"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "68.5"
+}

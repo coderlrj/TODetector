@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenSaver.sol:63:29: Warning: Callstack Depth Attack Vulnerability.\n        (success, result) = address(_tokenAddress).call(abi.encodeWithSignature(\"balanceOf(address)\", owner))"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenSaver.sol:63:29: Warning: Integer Overflow.\n        (success, result) = address(_tokenAddress).call(abi.encodeWithSignature(\"balanceOf(address)\", owner))\nInteger Overflow occurs if:\n    tokenType.length = 107839786668602559178668060348078522694548577690162289924414440996864"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenSaver.sol:8:11: Warning: Integer Underflow.\n    function approve(address, uint)  pub\nInteger Underflow occurs if:\n    tokenType.length = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "11.6"
+}

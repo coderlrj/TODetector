@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:218:38: Warning: Integer Overflow.\n    return (version.semanticVersion, version.contractAddress", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:160:5: Warning: Integer Overflow.\n    require(contractAddress != address(0), \"Contract address is required\")\nInteger Overflow occurs if:\n    _owner = 0\n    contractAddress = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:222:22: Warning: Integer Overflow.\n    return keccak256(abi.encodePacked(version[0], version[1], version[2])"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "32.0"
+}

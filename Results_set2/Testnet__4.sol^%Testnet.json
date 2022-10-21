@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Testnet__4.sol:55:3: Warning: Integer Overflow.\n\t\ttoken.transfer(tokenDeployer, tokenBalance)\nInteger Overflow occurs if:\n    tokenDeployer = 0\n    unixtimelock = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.8"
+}

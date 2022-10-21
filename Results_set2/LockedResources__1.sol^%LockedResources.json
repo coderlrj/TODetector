@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LockedResources__1.sol:118:5: Warning: Integer Overflow.\n    token.transfer(owner(), token.balanceOf(this))\nInteger Overflow occurs if:\n    _owner = 0\n    VaultCreation = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/LockedResources__1.sol:112:5: Warning: Integer Overflow.\n    token.transfer(owner(), amountToTake)\nInteger Overflow occurs if:\n    lastWithdrawal = 0\n    _owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.8"
+}

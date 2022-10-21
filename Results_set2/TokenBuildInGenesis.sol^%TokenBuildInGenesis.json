@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenBuildInGenesis.sol:253:9: Warning: Integer Overflow.\n        token.transfer(owner, balance)\nInteger Overflow occurs if:\n    owner = 0\n    authority = 1\n    _token = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenBuildInGenesis.sol:196:9: Warning: Integer Overflow.\n        require(!paused, \"Not started\")\nInteger Overflow occurs if:\n    paused = 1461501637330902918203684832716283019655932542976"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/TokenBuildInGenesis.sol:248:13: Warning: Transaction-Ordering Dependency.\n            owner.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/TokenBuildInGenesis.sol:248:13: Warning: Transaction-Ordering Dependency.\n            owner.transfer(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "73.9"
+}

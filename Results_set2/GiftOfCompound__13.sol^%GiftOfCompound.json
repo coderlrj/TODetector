@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GiftOfCompound__13.sol:179:33: Warning: Integer Overflow.\n            initialCDaiAmount = cdai.balanceOf(this)\nInteger Overflow occurs if:\n    theRecipient = 0\n    theSender = 1\n    initialCDaiAmount = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    _value = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/GiftOfCompound__13.sol:146:31: Warning: Integer Overflow.\n                  daiSurplus= cdai.balanceOf(this)\nInteger Overflow occurs if:\n    theRecipient = 0\n    theSender = 1\n    initialCDaiAmount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GiftOfCompound__13.sol:257:30: Warning: Integer Overflow.\n        uint256 cDaiMinted = cdai.balanceOf(this)", 
+   "/oyente/oyente/test/ContractCodeBalance/GiftOfCompound__13.sol:218:33: Warning: Integer Overflow.\n            uint256 daiSurplus= cdai.balanceOf(this)\nInteger Overflow occurs if:\n    qAddress = 0\n    theRecipient = 1\n    theSender = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GiftOfCompound__13.sol:218:33: Warning: Integer Underflow.\n            uint256 daiSurplus= cdai.balanceOf(this) -initialCDaiAmount\nInteger Underflow occurs if:\n    qAddress = 0\n    theRecipient = 1\n    theSender = 0\n    initialCDaiAmount = 108838677738410944166004842502709615852243729699924586675031164701851374321665"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "88.3"
+}

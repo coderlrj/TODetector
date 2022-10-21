@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:29:38: Warning: Integer Overflow.\n    uint[] memory tokenDecimalsRes = new uint[](tokens.length)", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:33:11: Warning: Integer Overflow.\n      if (tokens[j]\nInteger Overflow occurs if:\n    tokens = 115792089237316195423570985008687907853269984665640564039457584007913129639868", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:56:3: Warning: Integer Overflow.\n  function batchTokenBalances(address[] users, address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:34:51: Warning: Integer Overflow.\n        tokenDecimalsRes[addrIdx] = tokenDecimals(tokens[j]\nInteger Overflow occurs if:\n    tokens = 115792089237316195423570985008687907853269984665640564039457584007913129639708", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:6:12: Warning: Integer Overflow.\n  function decima", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:50:14: Warning: Integer Overflow.\n      return Token(token).balanceOf(user)", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:21:26: Warning: Integer Overflow.\n    if (tokenCode > 0 && token.call(bytes4(0x70a08231), \"0x0000000000000000000000000000000000000000\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:28:3: Warning: Integer Overflow.\n  function batchTokenDecimals(address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    tokens = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__2.sol:28:3: Warning: Integer Underflow.\n  function batchTokenDecimals(address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines."
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "66.1"
+}

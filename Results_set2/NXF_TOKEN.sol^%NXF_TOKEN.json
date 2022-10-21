@@ -1,0 +1,22 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:138:13: Warning: Integer Overflow.\n            spender.receiveApproval(msg.sender, _value, address(this), _extraData)", 
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:133:5: Warning: Integer Overflow.\n    function approveAndCall(address _spender, uint256 _value, bytes memory _extraData)\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:120:14: Warning: Integer Overflow.\n        emit Approval(msg.sender, _spender, _value)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:171:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    balanceOf[_from] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    allowance[_from][msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:120:14: Warning: Integer Underflow.\n        emit Approval(msg.sender, _spender, _value)", 
+   "/oyente/oyente/test/ContractCodeBalance/NXF_TOKEN.sol:153:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    totalSupply = 0\n    balanceOf[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.0"
+}

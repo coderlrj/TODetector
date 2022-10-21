@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BONDS.sol:207:31: Warning: Integer Underflow.\n        uint _baseDividends = msg.value - bondPreviousPrice[_bond]\nInteger Underflow occurs if:\n    bondOwner[_bond] = 0\n    bondPreviousPrice[_bond] = 1\n    nextAvailableBond = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    contractActive = 1\n    bondPrice[_bond] = 0"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/BONDS.sol:306:9: Warning: Transaction-Ordering Dependency.\n        _customerAddress.transfer(_dividends)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/BONDS.sol:320:9: Warning: Transaction-Ordering Dependency.\n        _customerAddress.transfer(_amount)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "66.6"
+}

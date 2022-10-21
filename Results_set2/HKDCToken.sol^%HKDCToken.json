@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/HKDCToken.sol:197:9: Warning: Transaction-Ordering Dependency.\n        selfdestruct(owner)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/HKDCToken.sol:188:7: Warning: Transaction-Ordering Dependency.\n\t\t    owner.send(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "73.9"
+}

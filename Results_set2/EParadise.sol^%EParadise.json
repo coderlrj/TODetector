@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:118:16: Warning: Integer Overflow.\n     balance = accounts[_user].creditBalance", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:125:9: Warning: Integer Overflow.\n        accounts[msg.sender].creditBalance\nInteger Overflow occurs if:\n    accounts[msg.sender].creditBalance = 57896044618658097711785492504343953926634992332820282019728792003956564819969", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:85:9: Warning: Integer Overflow.\n        accounts[msg.sender].depositTotal\nInteger Overflow occurs if:\n    accounts[msg.sender].user = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:123:33: Warning: Integer Overflow.\n     if(address(this).balance > accounts[msg.sender].creditBalance", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:90:9: Warning: Integer Overflow.\n        accounts[msg.sender].depositTotal\nInteger Overflow occurs if:\n    accounts[msg.sender].user = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:119:21: Warning: Integer Overflow.\n     depositTotal = accounts[_user].depositTotal", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:113:9: Warning: Integer Overflow.\n        accounts[_user].creditBalance\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/EParadise.sol:65:3: Warning: Integer Overflow.\n  mapping (address => Account) public accounts"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "78.4"
+}

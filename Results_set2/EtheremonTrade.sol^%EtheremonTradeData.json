@@ -1,0 +1,39 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:274:35: Warning: Integer Overflow.\n        return (borrowItem.owner, borrowItem.lent", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:261:16: Warning: Integer Overflow.\n        return borrowingDict[_objId].lent", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:194:9: Warning: Integer Overflow.\n        item.price\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:284:29: Warning: Integer Overflow.\n        return (item.index, item.price", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:326:24: Warning: Integer Overflow.\n        lendingPrice = borrowItem.price", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:109: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner, borrowItem.borrower, borrowItem.price, borrowItem.lent, borrowItem.createTime", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:35: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:284:41: Warning: Integer Overflow.\n        return (item.index, item.price, item.createTime", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:274:17: Warning: Integer Overflow.\n        return (borrowItem.owner", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:219:9: Warning: Integer Overflow.\n        item.owner\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:53: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner, borrowItem.borrower", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:233:9: Warning: Integer Overflow.\n        lendingList[_trainer].push(_objId)\nInteger Overflow occurs if:\n    lendingList[_trainer].push(_objId) = 115792089237316195423570985008687907853269984665640564039457584007913129639935\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:328:23: Warning: Integer Overflow.\n        releaseTime = borrowItem.releaseTime", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:74: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner, borrowItem.borrower, borrowItem.price", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:170:5: Warning: Integer Overflow.\n    mapping(uint => SellingItem) public sellingDict", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:132: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner, borrowItem.borrower, borrowItem.price, borrowItem.lent, borrowItem.createTime, borrowItem.releaseTime", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:173:5: Warning: Integer Overflow.\n    mapping(uint => BorrowItem) public borrowingDict", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:327:16: Warning: Integer Overflow.\n        lent = borrowItem.lent", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:279:92: Warning: Integer Overflow.\n        return (borrowItem.index, borrowItem.owner, borrowItem.borrower, borrowItem.price, borrowItem.lent", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:324:24: Warning: Integer Overflow.\n        sellingPrice = item.price", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:329:17: Warning: Integer Overflow.\n        owner = borrowItem.owner", 
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:265:16: Warning: Integer Overflow.\n        return sellingDict[_objId].price"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/EtheremonTrade.sol:77:13: Warning: Integer Underflow.\n            totalModerators -= 1\nInteger Underflow occurs if:\n    moderators[_oldModerator] = 1\n    owner = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.0"
+}

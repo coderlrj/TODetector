@@ -1,0 +1,26 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/QUIZ_Games.sol:19:5: Warning: Integer Overflow.\n    function Start(string _question, string _response) public payable isAdmin{\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _question = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/QUIZ_Games.sol:7:28: Warning: Integer Overflow.\n        if(responseHash == keccak256(_response)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/QUIZ_Games.sol:7:28: Warning: Integer Underflow.\n        if(responseHash == keccak256(_response)"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/QUIZ_Games.sol:9:13: Warning: Transaction-Ordering Dependency.\n            msg.sender.transfer(this.balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/QUIZ_Games.sol:27:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.transfer(this.balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "49.2"
+}

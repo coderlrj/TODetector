@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/nota.sol:72:115: Warning: Integer Overflow.\nreturn (candidates[\"James Lee\"].voteCount , candidates[\"Mark Kim\"].voteCount , candidates[\"Jun Park\"].voteCount , candidates[\"Yuna Lim\"].voteCount", 
+   "/oyente/oyente/test/ContractCodeBalance/nota.sol:72:9: Warning: Integer Overflow.\nreturn (candidates[\"James Lee\"].voteCount", 
+   "/oyente/oyente/test/ContractCodeBalance/nota.sol:72:150: Warning: Integer Overflow.\nreturn (candidates[\"James Lee\"].voteCount , candidates[\"Mark Kim\"].voteCount , candidates[\"Jun Park\"].voteCount , candidates[\"Yuna Lim\"].voteCount , candidates[\"Olivia Ha\"].voteCount", 
+   "/oyente/oyente/test/ContractCodeBalance/nota.sol:72:45: Warning: Integer Overflow.\nreturn (candidates[\"James Lee\"].voteCount , candidates[\"Mark Kim\"].voteCount", 
+   "/oyente/oyente/test/ContractCodeBalance/nota.sol:72:80: Warning: Integer Overflow.\nreturn (candidates[\"James Lee\"].voteCount , candidates[\"Mark Kim\"].voteCount , candidates[\"Jun Park\"].voteCount"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "48.5"
+}

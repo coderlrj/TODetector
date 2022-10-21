@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/CryptoFun.sol:361:1: Warning: Integer Overflow.\ninvestors[addr].paymentTime\nInteger Overflow occurs if:\n    owner = 0\n    investors[addr].investment = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoFun.sol:345:1: Warning: Integer Overflow.\ninvestors[addr].paymentTime\nInteger Overflow occurs if:\n    investors[addr].investment = 1\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoFun.sol:316:15: Warning: Integer Overflow.\npaymentTime = investors[addr].paymentTime"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "90.3"
+}

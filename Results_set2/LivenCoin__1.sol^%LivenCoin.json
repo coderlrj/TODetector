@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LivenCoin__1.sol:183:9: Warning: Integer Underflow.\n        return name_\nInteger Underflow occurs if:\n    return name_ = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/LivenCoin__1.sol:187:9: Warning: Integer Underflow.\n        return symbol_\nInteger Underflow occurs if:\n    return symbol_ = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "77.7"
+}

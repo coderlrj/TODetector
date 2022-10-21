@@ -1,0 +1,29 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [
+   "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:127:10: Warning: Re-Entrancy Vulnerability.\n      if(msg.sender.call.value(amount)()", 
+   "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:153:9: Warning: Re-Entrancy Vulnerability.\n    if(!target.call.value(amount)()", 
+   "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:129:9: Warning: Re-Entrancy Vulnerability.\n        TransferLog.addMessage(\" CashOut \")"
+  ], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:80:3: Warning: Integer Overflow.\n  mapping(address => investor) public investors"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:127:10: Warning: Integer Underflow.\n      if(msg.sender.call.value(amount)()\nInteger Underflow occurs if:\n    balances[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[msg.sender] = 1\n    amount = 1"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:184:7: Warning: Transaction-Ordering Dependency.\n      addr.transfer(this.balance + msg.value)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CaptureTheFlag__1.sol:50:5: Warning: Transaction-Ordering Dependency.\n    msg.sender.transfer(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "88.4"
+}

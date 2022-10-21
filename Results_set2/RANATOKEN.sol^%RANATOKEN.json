@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/RANATOKEN.sol:84:5: Warning: Integer Overflow.\n    function setName(string _name) public isOwner {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/RANATOKEN.sol:88:5: Warning: Integer Overflow.\n    function setSymbol(string _symbol) public isOwner {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _symbol = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "76.4"
+}

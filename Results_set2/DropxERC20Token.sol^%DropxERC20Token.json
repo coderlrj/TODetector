@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DropxERC20Token.sol:68:9: Warning: Integer Underflow.\n        totalSupply -= amount\nInteger Underflow occurs if:\n    balanceOf[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0\n    amount = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "53.7"
+}

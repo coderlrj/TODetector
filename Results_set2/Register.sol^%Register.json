@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Register.sol:84:9: Warning: Integer Overflow.\n        return registry[ethAddress]\nInteger Overflow occurs if:\n    return registry[ethAddress] = 115792089237316195423570985008687907853269984665640564039457584007913129639935"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Register.sol:84:9: Warning: Integer Underflow.\n        return registry[ethAddress]\nInteger Underflow occurs if:\n    return registry[ethAddress] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Register.sol:1:4: Warning: Integer Underflow.\n\nInteger Underflow occurs if:\n    return registry[ethAddress] = 129"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "71.1"
+}

@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SRDPoet.sol:15:3: Warning: Integer Overflow.\n\t\trequire(!hashesToProofs[_hash].valid, \"The document already exists\")\nInteger Overflow occurs if:\n    hashesToProofs[_hash].valid = 1\n    _hash = 4294965305", 
+   "/oyente/oyente/test/ContractCodeBalance/SRDPoet.sol:17:3: Warning: Integer Overflow.\n\t\thashesToProofs[_hash]\nInteger Overflow occurs if:\n    hashesToProofs[_hash].valid = 0\n    _hash = 4294837789"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SRDPoet.sol:14:14: Warning: Integer Underflow.\n\tfunction notarize(string memory _hash) pub\nInteger Underflow occurs if:\n    hashesToProofs[_hash].valid = 0\n    _hash = 4294446653", 
+   "/oyente/oyente/test/ContractCodeBalance/SRDPoet.sol:15:3: Warning: Integer Underflow.\n\t\trequire(!hashesToProofs[_hash].valid, \"The document already exists\")\nInteger Underflow occurs if:\n    hashesToProofs[_hash].valid = 1\n    _hash = 4294967296"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "46.9"
+}

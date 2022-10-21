@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/PNR.sol:178:43: Warning: Integer Underflow.\n        balances[_to] = balances[_to].add(_value-PNRFee\nInteger Underflow occurs if:\n    PNRFee = 1\n    paused = 0\n    GiveEth = 57896044618658097711785492504343953926634992332820282019728792003956564819969\n    balances[msg.sender] = 0"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/PNR.sol:261:9: Warning: Transaction-Ordering Dependency.\n        _to.transfer(amount)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/PNR.sol:176:9: Warning: Transaction-Ordering Dependency.\n        _to.transfer(GiveEth)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "73.9"
+}

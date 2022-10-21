@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ReferenceConsumer.sol:32:12: Warning: Integer Overflow.\n    return ref.getAnswer(latest - _back)\nInteger Overflow occurs if:\n    _back = 17431816721218634988426904253001598406575004240483728041707239182023564197889", 
+   "/oyente/oyente/test/ContractCodeBalance/ReferenceConsumer.sol:26:12: Warning: Integer Overflow.\n    return ref.latestTimestamp()", 
+   "/oyente/oyente/test/ContractCodeBalance/ReferenceConsumer.sol:22:12: Warning: Integer Overflow.\n    return ref.latestAnswer()", 
+   "/oyente/oyente/test/ContractCodeBalance/ReferenceConsumer.sol:38:12: Warning: Integer Overflow.\n    return ref.getTimestamp(latest - _back)\nInteger Overflow occurs if:\n    _back = 17431816721218634988426904253001598406575004240483728041707239182023564197889"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "94.7"
+}

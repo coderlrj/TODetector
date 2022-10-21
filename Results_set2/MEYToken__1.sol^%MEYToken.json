@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MEYToken__1.sol:123:3: Warning: Integer Overflow.\n  function transferForMultiAddresses(address[] _addresses, uint256[] _amounts) public returns (bool) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/MEYToken__1.sol:104:5: Warning: Integer Overflow.\n    function transferrealestate(address _to, uint256 _value, bytes data) returns (bool success) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MEYToken__1.sol:104:5: Warning: Integer Underflow.\n    function transferrealestate(address _to, uint256 _value, bytes data) returns (bool success) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    balances[msg.sender] = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "48.9"
+}

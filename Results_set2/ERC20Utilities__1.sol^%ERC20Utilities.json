@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:38:49: Warning: Integer Overflow.\n      tokenDecimalsRes[addrIdx] = tokenDecimals(tokens[j]", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:21:26: Warning: Integer Overflow.\n    if (tokenCode > 0 && token.call(bytes4(0x8ee573ac), \"0x0000000000000000000000000000000000000000\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:61:3: Warning: Integer Overflow.\n  function batchTokenBalances(address[] users, address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:51:16: Warning: Integer Overflow.\n        return Token(token).balanceOf(user)", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:34:38: Warning: Integer Overflow.\n    uint[] memory tokenDecimalsRes = new uint[](tokens.length)", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:6:12: Warning: Integer Overflow.\n  function decima", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:33:3: Warning: Integer Overflow.\n  function batchTokenDecimals(address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:22:16: Warning: Integer Overflow.\n        return Token(token).decimals()"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC20Utilities__1.sol:33:3: Warning: Integer Underflow.\n  function batchTokenDecimals(address[] tokens) external view returns (uint[]) {\n  ^\nSpanning multiple lines."
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "77.5"
+}

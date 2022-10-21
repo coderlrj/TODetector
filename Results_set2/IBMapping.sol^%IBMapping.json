@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/IBMapping.sol:34:3: Warning: Integer Overflow.\n\t\tContractAddress[name]\nInteger Overflow occurs if:\n    owners[man] = 1\n    name = 4294965561", 
+   "/oyente/oyente/test/ContractCodeBalance/IBMapping.sol:24:10: Warning: Integer Overflow.\n\t\treturn ContractAddress[name]\nInteger Overflow occurs if:\n    name = 4294951321"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/IBMapping.sol:9:38: Warning: Integer Underflow.\n\tmapping (address => bool) owners;\t\t\t\t\t\t\t\t\t\t//\tSuperman address\n\t^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    owners[man] = 1\n    name = 4294963349"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "89.9"
+}

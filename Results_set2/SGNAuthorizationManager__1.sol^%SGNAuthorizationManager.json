@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SGNAuthorizationManager__1.sol:251:5: Warning: Integer Overflow.\n    function isAuthorizedToSell(address _sender) external view returns (bool) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/SGNAuthorizationManager__1.sol:253:64: Warning: Integer Overflow.\n        (bool senderIsWhitelisted, uint256 senderActionRole) = authorizationDataSource.getAuthorizedActionRole(_sender)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "79.9"
+}

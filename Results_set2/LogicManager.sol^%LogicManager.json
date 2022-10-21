@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LogicManager.sol:58:5: Warning: Integer Overflow.\n    mapping (address => pending) public pendingLogics", 
+   "/oyente/oyente/test/ContractCodeBalance/LogicManager.sol:101:9: Warning: Integer Overflow.\n        return authorizedLogics\nInteger Overflow occurs if:\n    return authorizedLogics = 3618502788666131106986593281521497120414687020801267626233049500247285301247"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LogicManager.sol:100:5: Warning: Integer Underflow.\n    function getAuthorizedLogics() external view returns (address[] memory) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return authorizedLogics = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "63.7"
+}

@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:111:17: Warning: Integer Overflow.\n            if (alertersGroup[i]\nInteger Overflow occurs if:\n    admin = 0\n    alerter = 0\n    alertersGroup[i] = 1\n    alertersGroup.length = 2\n    alerters[alerter] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:53:9: Warning: Integer Overflow.\n        return operatorsGroup\nInteger Overflow occurs if:\n    return operatorsGroup = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:136:17: Warning: Integer Overflow.\n            if (operatorsGroup[i]\nInteger Overflow occurs if:\n    admin = 0\n    operatorsGroup[i] = 1\n    operators[operator] = 2\n    operatorsGroup.length = 2\n    operator = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:137:37: Warning: Integer Overflow.\n                operatorsGroup[i] = operatorsGroup[operatorsGroup.length - 1]\nInteger Overflow occurs if:\n    operatorsGroup[i] = 1\n    operatorsGroup[i] = 1\n    operatorsGroup[i] = 1\n    operators[operator] = 1\n    operatorsGroup[i] = 1\n    operatorsGroup[i] = 0\n    operatorsGroup.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    operatorsGroup[i] = 1\n    operatorsGroup[i] = 1\n    admin = 0\n    operatorsGroup[i] = 1\n    operator = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:57:9: Warning: Integer Overflow.\n        return alertersGroup\nInteger Overflow occurs if:\n    return alertersGroup = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:112:36: Warning: Integer Overflow.\n                alertersGroup[i] = alertersGroup[alertersGroup.length - 1]\nInteger Overflow occurs if:\n    alerter = 0\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alertersGroup[i] = 0\n    alertersGroup[i] = 1\n    alertersGroup.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    admin = 0\n    alertersGroup[i] = 1\n    alertersGroup[i] = 1\n    alerters[alerter] = 1\n    alertersGroup[i] = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KyberUniswapReserve.sol:1:4: Warning: Integer Underflow.\n\nInteger Underflow occurs if:\n    return operatorsGroup = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.9"
+}

@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:629:5: Warning: Integer Overflow.\n    require(address(providers[packageName].package) != address(0), \"Package to unset not found\")\nInteger Overflow occurs if:\n    _owner = 0\n    providers[packageName].package = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:630:12: Warning: Integer Overflow.\n    delete providers[packageName]\nInteger Overflow occurs if:\n    _owner = 0\n    providers[packageName].package = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:594:3: Warning: Integer Overflow.\n  function getProvider(string packageName) public view returns (ImplementationProvider provider) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    packageName = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:617:3: Warning: Integer Overflow.\n  function setPackage(string packageName, Package package, uint64[3] version) public onlyOwner {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:605:3: Warning: Integer Overflow.\n  function getPackage(string packageName) public view returns (Package, uint64[3]) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    packageName = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:640:3: Warning: Integer Overflow.\n  function getImplementation(string packageName, string contractName) public view returns (address) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    packageName = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:658:4: Warning: Integer Overflow.\n   function create(string packageName, string contractName, address admin, bytes data) payable public returns (AdminUpgradeabilityProxy) {\n   ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    packageName = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:595:33: Warning: Integer Underflow.\n    ProviderInfo storage info = providers[packageName]", 
+   "/oyente/oyente/test/ContractCodeBalance/AdminUpgradeabilityProxy__14.sol:11:12: Warning: Integer Underflow.\n   * @dev Abstract function to return the"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "27.9"
+}

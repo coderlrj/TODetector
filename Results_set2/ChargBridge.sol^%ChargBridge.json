@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:176:45: Warning: Integer Overflow.\n        emit Validated(_txHash, msg.sender, transactions[_txHash].validated\nInteger Overflow occurs if:\n    validationsRequired = 2\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 2", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:174:13: Warning: Integer Overflow.\n            transactions[_txHash].completed\nInteger Overflow occurs if:\n    validationsRequired = 0\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 57896044618658097711785492504343953926634992332820282019728792003956564819969", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:162:13: Warning: Integer Overflow.\n            transactions[_txHash].validated\nInteger Overflow occurs if:\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 2", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:121:5: Warning: Integer Overflow.\n    mapping (bytes32 => Transaction) public transactions", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:169:47: Warning: Integer Overflow.\n            transactions[_txHash].validated = transactions[_txHash].validated\nInteger Overflow occurs if:\n    _initiator = 1\n    transactions[_txHash].amount = 2\n    validationsRequired = 1\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 1\n    transactions[_txHash].validated = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:161:13: Warning: Integer Overflow.\n            transactions[_txHash].amount\nInteger Overflow occurs if:\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 2", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:176:78: Warning: Integer Overflow.\n        emit Validated(_txHash, msg.sender, transactions[_txHash].validated, transactions[_txHash].completed\nInteger Overflow occurs if:\n    validationsRequired = 2\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 2", 
+   "/oyente/oyente/test/ContractCodeBalance/ChargBridge.sol:172:13: Warning: Integer Overflow.\n        if (transactions[_txHash].validated\nInteger Overflow occurs if:\n    transactions[_txHash].completed = 0\n    validatedBy[_txHash][msg.sender] = 0\n    isValidator[msg.sender] = 1\n    transactions[_txHash].initiator = 0\n    _amount = 2"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "95.8"
+}

@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:229:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"BAT\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:224:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"SAI\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:234:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"LINK\", \"UNISWAPBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:157:8: Warning: Integer Overflow.\n       token.approve(address(proxy), tokenQty)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:199:9: Warning: Integer Overflow.\n        saiToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:217:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"LINK\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:211:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"BAT\", \"KYBERBYSYMBOLV1\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__22.sol:206:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"SAI\", \"KYBERBYSYMBOLV1\", 1000000000000000000)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "83.8"
+}

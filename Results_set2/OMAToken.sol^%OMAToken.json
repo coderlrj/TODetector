@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/OMAToken.sol:233:5: Warning: Integer Overflow.\n    function approveAndCall(address _spender, uint256 _value, bytes _extraData) onlyOwner\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/OMAToken.sol:220:14: Warning: Integer Underflow.\n        emit Approval(msg.sender, _spender, _value)\nInteger Underflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/OMAToken.sol:238:13: Warning: Integer Underflow.\n            spender.receiveApproval(msg.sender, _value, this, _extraData)\nInteger Underflow occurs if:\n    owner = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "80.8"
+}

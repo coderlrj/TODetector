@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AetheriaFirstStageProxy.sol:233:20: Warning: Integer Overflow.\n\t\treturn keccak256(abi.encode(userAddress, plotIds, nonce)\nInteger Overflow occurs if:\n    plotIds = 4294902745"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AetheriaFirstStageProxy.sol:1:27: Warning: Integer Underflow.\n", 
+   "/oyente/oyente/test/ContractCodeBalance/AetheriaFirstStageProxy.sol:233:20: Warning: Integer Underflow.\n\t\treturn keccak256(abi.encode(userAddress, plotIds, nonce)\nInteger Underflow occurs if:\n    plotIds = 5242873"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "64.4"
+}

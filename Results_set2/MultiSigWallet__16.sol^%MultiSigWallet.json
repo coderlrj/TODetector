@@ -1,0 +1,34 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:249:23: Warning: Callstack Depth Attack Vulnerability.\n            result := call(\n            ^\nSpanning multiple lines."
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:295:39: Warning: Integer Overflow.\n        transactions[transactionId] = Transaction({\n        ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:232:13: Warning: Integer Overflow.\n            txn.executed\nInteger Overflow occurs if:\n    owners.length = 1\n    confirmations[transactionId][owner] = 0\n    transactions[transactionId].destination = 1\n    isOwner[owner] = 1\n    transactions[transactionId].executed = 0\n    confirmations[transactionId][owners[i]] = 0\n    required = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:331:32: Warning: Integer Overflow.\n            if (   pending && !transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:144:29: Warning: Integer Overflow.\n                owners[i] = owners[owners.length - 1]\nInteger Overflow occurs if:\n    isOwner[owner] = 1\n    owners[i] = 0\n    owners.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:388:27: Warning: Integer Overflow.\n        _transactionIds = new uint[](to - from)\nInteger Overflow occurs if:\n    transactionCount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:382:32: Warning: Integer Overflow.\n            if (   pending && !transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:343:9: Warning: Integer Overflow.\n        return owners\nInteger Overflow occurs if:\n    return owners = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:354:46: Warning: Integer Overflow.\n        address[] memory confirmationsTemp = new address[](owners.length)\nInteger Overflow occurs if:\n    owners.length = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:383:32: Warning: Integer Overflow.\n                || executed && transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:332:32: Warning: Integer Overflow.\n                || executed && transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:378:44: Warning: Integer Overflow.\n        uint[] memory transactionIdsTemp = new uint[](transactionCount)\nInteger Overflow occurs if:\n    transactionCount = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:5:12: Warning: Integer Overflow.\n/// @author Stefa\nInteger Overflow occurs if:\n    transactionCount = 3618502788666131106986593281521497120414687020801267626233049500247285301243"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:349:5: Warning: Integer Underflow.\n    function getConfirmations(uint transactionId)\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    owners.length = 0\n    owners.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:338:5: Warning: Integer Underflow.\n    function getOwners()\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return owners = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:388:38: Warning: Integer Underflow.\n        _transactionIds = new uint[](to - from\nInteger Underflow occurs if:\n    transactionCount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__16.sol:142:26: Warning: Integer Underflow.\n        for (uint i=0; i<owners.length - 1\nInteger Underflow occurs if:\n    isOwner[owner] = 1\n    owners.length = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "72.4"
+}

@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ContractAddressLocatorProxy.sol:180:16: Warning: Integer Overflow.\n        return contractAddressLocator.isContractAddressRelates(_contractAddress, _identifiers)", 
+   "/oyente/oyente/test/ContractCodeBalance/ContractAddressLocatorProxy.sol:170:16: Warning: Integer Overflow.\n        return contractAddressLocator.getContractAddress(_identifier)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.8"
+}

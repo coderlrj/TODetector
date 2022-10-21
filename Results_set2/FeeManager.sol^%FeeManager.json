@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/FeeManager.sol:195:9: Warning: Integer Overflow.\n        IERC20(awgContractAddress).transfer(msg.sender,IERC20(awgContractAddress).balanceOf(address(this)))\nInteger Overflow occurs if:\n    _owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "91.0"
+}

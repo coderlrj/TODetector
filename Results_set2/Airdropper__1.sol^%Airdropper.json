@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Airdropper__1.sol:24:5: Warning: Integer Overflow.\n    function AirTransfer(address[] _recipients, uint[] _values, address _tokenAddress) onlyOwner public returns (bool) {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.3"
+}

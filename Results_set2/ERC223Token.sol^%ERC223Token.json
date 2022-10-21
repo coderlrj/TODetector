@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC223Token.sol:50:7: Warning: Integer Overflow.\n      return name\nInteger Overflow occurs if:\n    return name = 115792089237316195423570985008687907853269984665640564020568118076434548785151"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ERC223Token.sol:54:7: Warning: Integer Underflow.\n      return symbol\nInteger Underflow occurs if:\n    return symbol = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/ERC223Token.sol:50:7: Warning: Integer Underflow.\n      return name\nInteger Underflow occurs if:\n    return name = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "45.6"
+}

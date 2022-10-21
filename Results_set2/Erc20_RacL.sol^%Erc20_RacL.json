@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Erc20_RacL.sol:91:5: Warning: Integer Underflow.\n    totalSupply -= _value\nInteger Underflow occurs if:\n    _value = 1\n    owner = 0\n    totalSupply = 0\n    balanceOf[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "72.1"
+}

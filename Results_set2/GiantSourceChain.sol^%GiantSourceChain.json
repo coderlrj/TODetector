@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GiantSourceChain.sol:107:6: Warning: Integer Overflow.\n     function reward(address[] adarr,uint[] amarr) public payable returns (uint){\n     ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    adarr = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/GiantSourceChain.sol:205:20: Warning: Integer Overflow.\n                if(users[i]\nInteger Overflow occurs if:\n    user_index[msg.sender] = 23158417847463239084714197001737581570653996933128112807891516801582625927988\n    users[i] = 23158417847463239084714197001737581570653996933128112807891516801582625927990"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/GiantSourceChain.sol:140:34: Warning: Transaction-Ordering Dependency.\n        if (msg.value <1 ether) {msg.sender.transfer(msg.value)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/GiantSourceChain.sol:136:9: Warning: Transaction-Ordering Dependency.\n        a.transfer(m)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "46.5"
+}

@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GandhiJi.sol:481:27: Warning: Integer Underflow.\n        return (uint256) ((int256)(profitPerShare_ * tokenBalanceLedger_[_customerAddress]) - payoutsTo_[_customerAddress]\nInteger Underflow occurs if:\n    payoutsTo_[_customerAddress] = 1\n    tokenBalanceLedger_[_customerAddress] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GandhiJi.sol:87:34: Warning: Integer Underflow.\n        if( onlyAmbassadors && ((totalEthereumBalance() - _amountOfEthereum\nInteger Underflow occurs if:\n    onlyAmbassadors = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "47.9"
+}

@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/MyEthDice.sol:64:9: Warning: Callstack Depth Attack Vulnerability.\n        receiver.send(withdrawAmount)", 
+   "/oyente/oyente/test/ContractCodeBalance/MyEthDice.sol:116:16: Warning: Callstack Depth Attack Vulnerability.\n          if (!bet.player.send(payout)"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MyEthDice.sol:54:21: Warning: Integer Underflow.\n      maxProfit = ((address(this).balance - lockedFunds\nInteger Underflow occurs if:\n    lockedFunds = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "2.2"
+}

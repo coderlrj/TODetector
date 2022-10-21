@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Minter.sol:219:5: Warning: Integer Overflow.\n    mapping (uint256 => MintRequest) public requests", 
+   "/oyente/oyente/test/ContractCodeBalance/Minter.sol:247:9: Warning: Integer Overflow.\n        requests[index] = MintRequest(index, receiver, msg.sender, value, barId, barSize, false)\nInteger Overflow occurs if:\n    index = 57896044618658097711785492504343953926634992332820282019728792003956564819967"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "74.4"
+}

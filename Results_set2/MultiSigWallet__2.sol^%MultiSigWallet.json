@@ -1,0 +1,40 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:249:23: Warning: Callstack Depth Attack Vulnerability.\n            result := call"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:164:17: Warning: Integer Overflow.\n                owners[i]\nInteger Overflow occurs if:\n    owners[i] = 1\n    owners[i] = 1\n    isOwner[owner] = 1\n    isOwner[owner] = 0\n    owners[i] = 0\n    owners.length = 9\n    owners[i] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:163:17: Warning: Integer Overflow.\n            if (owners[i]\nInteger Overflow occurs if:\n    isOwner[owner] = 1\n    isOwner[owner] = 0\n    owners.length = 2\n    owners[i] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:388:27: Warning: Integer Overflow.\n        _transactionIds = new uint[](to - from)\nInteger Overflow occurs if:\n    transactionCount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:331:32: Warning: Integer Overflow.\n            if (   pending && !transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:144:29: Warning: Integer Overflow.\n                owners[i] = owners[owners.length - 1]\nInteger Overflow occurs if:\n    owners[i] = 0\n    isOwner[owner] = 1\n    owners.length = 115792089237316195423570985008687907853269984665640564039457584007913129639930\n    owners[i] = 1\n    owners[i] = 1\n    owners[i] = 1048576\n    owners[i] = 2\n    owners[i] = 1\n    owners[i] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:29:5: Warning: Integer Overflow.\n    mapping (uint => Transaction) public transactions", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:317:46: Warning: Integer Overflow.\n            if (confirmations[transactionId][owners[i]\nInteger Overflow occurs if:\n    owners.length = 2\n    confirmations[transactionId][owners[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:382:32: Warning: Integer Overflow.\n            if (   pending && !transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:143:17: Warning: Integer Overflow.\n            if (owners[i]\nInteger Overflow occurs if:\n    isOwner[owner] = 1\n    owners[i] = 1\n    owners.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:274:46: Warning: Integer Overflow.\n            if (confirmations[transactionId][owners[i]\nInteger Overflow occurs if:\n    owners.length = 2\n    required = 1\n    confirmations[transactionId][owners[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:383:32: Warning: Integer Overflow.\n                || executed && transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:373:5: Warning: Integer Overflow.\n    function getTransactionIds(uint from, uint to, bool pending, bool executed)\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    transactionCount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:332:32: Warning: Integer Overflow.\n                || executed && transactions[i].executed\nInteger Overflow occurs if:\n    transactionCount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:359:44: Warning: Integer Overflow.\n                confirmationsTemp[count] = owners[i]\nInteger Overflow occurs if:\n    confirmations[transactionId][owners[i]] = 0\n    confirmations[transactionId][owners[i]] = 0\n    confirmations[transactionId][owners[i]] = 1\n    owners.length = 7\n    confirmations[transactionId][owners[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:295:39: Warning: Integer Overflow.\n        transactions[transactionId] = Transaction({\n        ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:358:46: Warning: Integer Overflow.\n            if (confirmations[transactionId][owners[i]\nInteger Overflow occurs if:\n    owners.length = 2\n    confirmations[transactionId][owners[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:354:46: Warning: Integer Overflow.\n        address[] memory confirmationsTemp = new address[](owners.length)\nInteger Overflow occurs if:\n    owners.length = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:343:9: Warning: Integer Overflow.\n        return owners\nInteger Overflow occurs if:\n    return owners = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:378:44: Warning: Integer Overflow.\n        uint[] memory transactionIdsTemp = new uint[](transactionCount)\nInteger Overflow occurs if:\n    transactionCount = 3618502788666131106986593281521497120414687020801267626233049500247285301247"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:1:4: Warning: Integer Underflow.\n\nInteger Underflow occurs if:\n    return owners = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:388:38: Warning: Integer Underflow.\n        _transactionIds = new uint[](to - from\nInteger Underflow occurs if:\n    transactionCount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSigWallet__2.sol:142:26: Warning: Integer Underflow.\n        for (uint i=0; i<owners.length - 1\nInteger Underflow occurs if:\n    isOwner[owner] = 1\n    owners.length = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "74.3"
+}

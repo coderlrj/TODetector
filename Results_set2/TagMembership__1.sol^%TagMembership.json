@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership__1.sol:142:3: Warning: Integer Overflow.\n  function getUserInfoAt(string _user, uint _position) onlyAdmin public view returns(uint, uint) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _user = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership__1.sol:200:3: Warning: Integer Overflow.\n  function getMyMembership(string _userId) public view returns(uint, uint) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _userId = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership__1.sol:98:5: Warning: Integer Overflow.\n    require(msg.sender == admin, \"onlyAdmin\")\nInteger Overflow occurs if:\n    admin = 18014398509481984"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership__1.sol:10:47: Warning: Integer Underflow.\n    function approve(address spender, uint256 value) public returns (bool);\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership__1.sol:201:37: Warning: Integer Underflow.\n    Membership storage memberShip = memberships[_userId]"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "56.6"
+}

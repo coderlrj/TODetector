@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/OXO__1.sol:110:13: Warning: Integer Overflow.\n            transferLogs(_users[i],'',_prices[i])\nInteger Overflow occurs if:\n    _allPrices = 1\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/OXO__1.sol:110:39: Warning: Integer Overflow.\n            transferLogs(_users[i],'',_prices[i]\nInteger Overflow occurs if:\n    _allPrices = 1\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/OXO__1.sol:120:12: Warning: Transaction-Ordering Dependency.\n           owner.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/OXO__1.sol:117:17: Warning: Transaction-Ordering Dependency.\n                owner.transfer(_price)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "63.1"
+}

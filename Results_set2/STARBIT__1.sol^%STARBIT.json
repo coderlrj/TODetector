@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/STARBIT__1.sol:225:3: Warning: Integer Overflow.\n\t\tApproveAndCallFallBack(spender).receiveApproval(msg.sender, tokens, address(this), data)\nInteger Overflow occurs if:\n    _stopTrade = 0\n    spender = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/STARBIT__1.sol:242:10: Warning: Integer Overflow.\n\t\treturn ERC20Interface(tokenAddress).transfer(owner, tokens)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/STARBIT__1.sol:224:8: Warning: Integer Overflow.\n\t\temit Approval(msg.sender, spender, tokens)\nInteger Overflow occurs if:\n    _stopTrade = 0\n    spender = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/STARBIT__1.sol:224:8: Warning: Integer Underflow.\n\t\temit Approval(msg.sender, spender, tokens)\nInteger Underflow occurs if:\n    _stopTrade = 0\n    spender = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "71.2"
+}

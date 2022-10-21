@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/GooglierPlatinum.sol:157:11: Warning: Transaction-Ordering Dependency.\n      if(!ethFundDeposit.send(this.balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/GooglierPlatinum.sol:157:11: Warning: Transaction-Ordering Dependency.\n      if(!ethFundDeposit.send(this.balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "79.8"
+}

@@ -1,0 +1,30 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:110:9: Warning: Integer Overflow.\n        require(isOwner(), \"Ownable: caller is not the owner\")\nInteger Overflow occurs if:\n    _market = 4294950417\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:222:9: Warning: Integer Overflow.\n        require(pairs[key].tokenContract != address(0), \"No token found\")\nInteger Overflow occurs if:\n    _market = 4294951321\n    _owner = 0\n    pairs[key].tokenContract = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:197:9: Warning: Integer Overflow.\n        require(msg.sender == messenger, \"caller is not a messenger\")\nInteger Overflow occurs if:\n    _market = 2147482645\n    messenger = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:258:9: Warning: Integer Overflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Overflow occurs if:\n    _market = 4294942229", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:224:16: Warning: Integer Overflow.\n        delete pairs[key]\nInteger Overflow occurs if:\n    _market = 4294959493\n    _owner = 0\n    pairs[key].tokenContract = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:296:9: Warning: Integer Overflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Overflow occurs if:\n    _market = 4294951321\n    _tokenvalueInWei = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:236:9: Warning: Integer Overflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Overflow occurs if:\n    _market = 4294959165\n    _tokenvalueInWei = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:276:9: Warning: Integer Overflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Overflow occurs if:\n    _market = 4294447037\n    _tokenvalueInWei = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:110:9: Warning: Integer Underflow.\n        require(isOwner(), \"Ownable: caller is not the owner\")\nInteger Underflow occurs if:\n    _market = 2147664832\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:296:9: Warning: Integer Underflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Underflow occurs if:\n    _market = 4294967296\n    _tokenvalueInWei = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:276:9: Warning: Integer Underflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Underflow occurs if:\n    _market = 4294967296\n    _tokenvalueInWei = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:197:9: Warning: Integer Underflow.\n        require(msg.sender == messenger, \"caller is not a messenger\")\nInteger Underflow occurs if:\n    _market = 2214588632\n    messenger = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:236:9: Warning: Integer Underflow.\n        require(_tokenvalueInWei > 0, \"Amount should be greater than zero\")\nInteger Underflow occurs if:\n    _market = 4294967296\n    _tokenvalueInWei = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiCoinVault.sol:10:36: Warning: Integer Underflow.\n        require(c >= a, \"SafeMath: addition overflow\");\n        ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    _market = 4294959137\n    _owner = 0\n    pairs[key].tokenContract = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "32.6"
+}

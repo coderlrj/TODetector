@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/JUSToken.sol:105:5: Warning: Integer Overflow.\n    function approveAndCall(address _spender, uint256 _value, bytes _extraData)\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _extraData = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/JUSToken.sol:110:13: Warning: Integer Overflow.\n            spender.receiveApproval(msg.sender, _value, this, _extraData)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/JUSToken.sol:125:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    totalSupply = 0\n    balanceOf[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    _value = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/JUSToken.sol:143:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    balanceOf[_from] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    allowance[_from][msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0\n    _value = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "64.2"
+}

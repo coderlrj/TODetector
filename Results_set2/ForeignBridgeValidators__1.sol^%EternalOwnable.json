@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators__1.sol:60:41: Warning: Integer Overflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\")\nInteger Overflow occurs if:\n    newOwner = 1\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators__1.sol:59:5: Warning: Integer Overflow.\n    function owner() public view returns (address) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators__1.sol:60:31: Warning: Integer Underflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\"))"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "55.6"
+}

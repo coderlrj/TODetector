@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SynthSummaryUtil__1.sol:58:26: Warning: Integer Overflow.\n        uint numSynths = synthetix.availableSynthCount()", 
+   "/oyente/oyente/test/ContractCodeBalance/SynthSummaryUtil__1.sol:80:29: Warning: Integer Overflow.\n        uint256 numSynths = synthetix.availableSynthCount()", 
+   "/oyente/oyente/test/ContractCodeBalance/SynthSummaryUtil__1.sol:44:26: Warning: Integer Overflow.\n        uint numSynths = synthetix.availableSynthCount()"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "30.0"
+}

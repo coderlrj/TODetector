@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership.sol:225:3: Warning: Integer Overflow.\n  function getMyMembership(string _userId) public view returns(uint, uint) {\n  ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership.sol:226:37: Warning: Integer Underflow.\n    Membership storage memberShip = memberships[_userId]", 
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership.sol:10:47: Warning: Integer Underflow.\n    function approve(address spender, uint256 value) public returns (bool);\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TagMembership.sol:98:5: Warning: Integer Underflow.\n    require(msg.sender == admin, \"onlyAdmin\")\nInteger Underflow occurs if:\n    admin = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "51.2"
+}

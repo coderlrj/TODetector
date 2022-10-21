@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/airdrop__5.sol:141:5: Warning: Integer Overflow.\n    function multisendToken(address token, address[] _contributors, uint256[] _balances) public onlyOwner {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/airdrop__5.sol:137:5: Warning: Integer Overflow.\n    function txCount(address customer) public view returns(uint256) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/airdrop__5.sol:138:28: Warning: Integer Underflow.\n        return uintStorage[keccak256(abi.encodePacked(\"txCount\", customer))"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "48.4"
+}

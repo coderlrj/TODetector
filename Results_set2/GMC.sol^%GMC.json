@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GMC.sol:107:14: Warning: Integer Overflow.\n        emit Approval(msg.sender, _spender, _value)\nInteger Overflow occurs if:\n    released = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/GMC.sol:116:13: Warning: Integer Overflow.\n            spender.receiveApproval(msg.sender, _value, this, _extraData)\nInteger Overflow occurs if:\n    released = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GMC.sol:107:14: Warning: Integer Underflow.\n        emit Approval(msg.sender, _spender, _value)\nInteger Underflow occurs if:\n    released = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "74.6"
+}

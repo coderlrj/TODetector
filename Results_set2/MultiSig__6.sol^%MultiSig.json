@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MultiSig__6.sol:99:20: Warning: Integer Overflow.\n            return token.balanceOf(this)\nInteger Overflow occurs if:\n    _owner = 0\n    addrA = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSig__6.sol:56:18: Warning: Integer Overflow.\n          return token.totalSupply()", 
+   "/oyente/oyente/test/ContractCodeBalance/MultiSig__6.sol:88:13: Warning: Integer Overflow.\n            token.transfer(to, amount)\nInteger Overflow occurs if:\n    addrC = 0\n    amount = 21994610810423797598326603746193684962291241200694163645437976695916527091713\n    addrB = 1\n    addrA = 1\n    permits[to][amount].addrCYes = 257"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.4"
+}

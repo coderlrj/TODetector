@@ -1,0 +1,22 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:78:12: Warning: Integer Overflow.\n           BebUsers[_addr].bebtime\nInteger Overflow occurs if:\n    OneMinuteBEB = 0\n    Bebamount = 1\n    BebUsers[msg.sender].amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:57:5: Warning: Integer Overflow.\n    mapping(address=>BebUser)public BebUsers", 
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:137:17: Warning: Integer Overflow.\n         return bebTokenTransfer.balanceOf(address(this))", 
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:77:12: Warning: Integer Overflow.\n           BebUsers[_addr].amount\nInteger Overflow occurs if:\n    OneMinuteBEB = 0\n    Bebamount = 1\n    BebUsers[msg.sender].amount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:156:15: Warning: Integer Overflow.\n       assert(user.amount"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BebPos__6.sol:146:28: Warning: Integer Underflow.\n        uint256 _sumAmount=bebTotalAmount-Bebamount\nInteger Underflow occurs if:\n    Bebamount = 1\n    bebTotalAmount = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "61.9"
+}

@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/AirDrop__1.sol:203:5: Warning: Integer Overflow.\n    token.transfer(msg.sender, valueAirDrop)\nInteger Overflow occurs if:\n    payedAddress[msg.sender] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/AirDrop__1.sol:197:5: Warning: Integer Overflow.\n    token.transfer(owner(), token.balanceOf(this))\nInteger Overflow occurs if:\n    _owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "96.4"
+}

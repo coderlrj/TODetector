@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/I0Crypto.sol:197:22: Warning: Callstack Depth Attack Vulnerability.\n            result = address(uint160(referrer)).send(msg.value)"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/I0Crypto.sol:156:22: Warning: Integer Overflow.\n             require(users[msg.sender].expiring\nInteger Overflow occurs if:\n    users[msg.sender].isExist = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/I0Crypto.sol:159:13: Warning: Integer Overflow.\n        if (users[msg.sender].expiring\nInteger Overflow occurs if:\n    users[msg.sender].isExist = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "9.3"
+}

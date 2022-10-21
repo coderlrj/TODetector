@@ -1,0 +1,22 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:139:14: Warning: Integer Overflow.\n      return abi.encodePacked(block.difficulty, now, players)\nInteger Overflow occurs if:\n    players.length = 61514547407324228818772085785865451047049679353621549645961841504203850121212\n    peopleToStart = 3618502788666131106986593281521497120414687020801267626233049500247285301245", 
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:118:3: Warning: Integer Overflow.\n\t\treturn (charity, winnerPerson, token.balanceOf(address(this)), players.length, lastWinners.length, peopleToStart, lotteryTicketValue, lastWinners)\nInteger Overflow occurs if:\n    lastWinners.length = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:148:5: Warning: Integer Overflow.\n    token.transferFrom(msg.sender, address(this), lotteryTicketValue)\nInteger Overflow occurs if:\n    lotteryTicketValue = 21994610810423797598326603746193684962291241200694163645437976695916527091713", 
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:118:34: Warning: Integer Overflow.\n\t\treturn (charity, winnerPerson, token.balanceOf(address(this))"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:135:21: Warning: Integer Underflow.\n        return uint(keccak256(encodeData())\nInteger Underflow occurs if:\n    peopleToStart = 0\n    players.length = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Lottery__1.sol:117:3: Warning: Integer Underflow.\n  function allInfoFor() public view returns (uint256 chrityShareInfo, uint256 winnerShareInfo, uint256 tokensToWin, uint howManyPlayers, uint256 howManyWinners, uint peopleToStartLottery, uint256 lotteryTicketValueInfo,  address[] allLastWinners) {\n  ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    lastWinners.length = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "69.0"
+}

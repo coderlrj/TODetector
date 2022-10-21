@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Faucet.sol:136:17: Warning: Integer Overflow.\n         return ERC20(tokenAddress).balanceOf(this)", 
+   "/oyente/oyente/test/ContractCodeBalance/Faucet.sol:132:10: Warning: Integer Overflow.\n         ERC20(tokenAddress).transfer(owner, amount)\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "83.5"
+}

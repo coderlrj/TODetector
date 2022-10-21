@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__61.sol:122:8: Warning: Integer Overflow.\n       token.approve(address(proxy), tokenQty)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__61.sol:146:8: Warning: Integer Overflow.\n       token.approve(address(proxy), tokenQty)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__61.sol:202:10: Warning: Integer Overflow.\n         saiToken.transfer(msg.sender, currentSaiBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__61.sol:209:34: Warning: Integer Overflow.\n        uint256 currentBalance = token.balanceOf(this)"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.1"
+}

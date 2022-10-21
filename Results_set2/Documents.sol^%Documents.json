@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Documents.sol:14:5: Warning: Integer Overflow.\n    mapping(bytes32 => Document) public documents", 
+   "/oyente/oyente/test/ContractCodeBalance/Documents.sol:20:9: Warning: Integer Overflow.\n        documents[hash] = Document(msg.sender, hash, block.number, true)\nInteger Overflow occurs if:\n    documents[hash].exists = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "99.7"
+}

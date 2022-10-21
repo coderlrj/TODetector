@@ -1,0 +1,35 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:241:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"BAT\", \"SELL-KYBER-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:236:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"SAI\", \"SELL-KYBER-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:260:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"SAI\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:277:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"WBTC\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:265:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"BAT\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:207:9: Warning: Integer Overflow.\n        saiToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:221:9: Warning: Integer Overflow.\n        linkToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:252:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"WBTC\", \"SELL-KYBER-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:246:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"LINK\", \"SELL-KYBER-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:160:8: Warning: Integer Overflow.\n       token.approve(address(proxy), tokenQty)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:214:9: Warning: Integer Overflow.\n        batToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:270:32: Warning: Integer Overflow.\n       uint256 currentPrice =  orfeed.getExchangeRate(\"ETH\", \"LINK\", \"BUY-UNISWAP-EXCHANGE\", 1000000000000000000)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:229:9: Warning: Integer Overflow.\n        wbtcToken.transfer(msg.sender, currentTokenBalance)\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:226:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.send(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Trader__31.sol:218:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.send(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "87.7"
+}

@@ -1,0 +1,28 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:553:26: Warning: Integer Overflow.\n    require(msg.value >= offers[_tokenId].offer\nInteger Overflow occurs if:\n    paused = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:801:10: Warning: Integer Overflow.\n    emit UpdatePlatformPercentageFee(platformFeePercentage, _platformFeePercentage)", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:218:3: Warning: Integer Overflow.\n  function hasRole(address _operator, string _role)\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:791:5: Warning: Integer Overflow.\n    require(_koCommissionAccount != address(0), \"Invalid address\")\nInteger Overflow occurs if:\n    _koCommissionAccount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:323:3: Warning: Integer Overflow.\n  function whitelist(address _operator)\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:796:10: Warning: Integer Overflow.\n    emit UpdateRoyaltyPercentageFee(artistRoyaltyPercentage, _artistRoyaltyPercentage)", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:652:43: Warning: Integer Overflow.\n    uint256 currentHighestBiddersAmount = offers[_tokenId].offer"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:246:5: Warning: Integer Underflow.\n    roles[_role]\nInteger Underflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:223:12: Warning: Integer Underflow.\n    return roles[_role]", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:11:1: Warning: Integer Underflow.\n */\n ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:209:5: Warning: Integer Underflow.\n    roles[_role]", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenMarketplace.sol:234:5: Warning: Integer Underflow.\n    roles[_role]\nInteger Underflow occurs if:\n    owner = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "65.3"
+}

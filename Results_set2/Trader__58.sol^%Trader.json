@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__58.sol:203:10: Warning: Integer Overflow.\n         saiToken.transfer(msg.sender, currentSaiBalance)\nInteger Overflow occurs if:\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__58.sol:125:26: Warning: Integer Overflow.\n       uint destAmount = proxy.tradeWithHint(ETH_TOKEN_ADDRESS, tokenQty, token, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000000, PERM_HINT)\nInteger Overflow occurs if:\n    proxy.tradeWithHint(ETH_TOKEN_ADDRESS, tokenQty, token, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000000, PERM_HINT) = 0\n    owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__58.sol:210:34: Warning: Integer Overflow.\n        uint256 currentBalance = token.balanceOf(this)", 
+   "/oyente/oyente/test/ContractCodeBalance/Trader__58.sol:147:8: Warning: Integer Overflow.\n       token.approve(address(proxy), tokenQty)\nInteger Overflow occurs if:\n    owner = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Trader__58.sol:125:26: Warning: Integer Underflow.\n       uint destAmount = proxy.tradeWithHint(ETH_TOKEN_ADDRESS, tokenQty, token, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000000, PERM_HINT)\nInteger Underflow occurs if:\n    proxy.tradeWithHint(ETH_TOKEN_ADDRESS, tokenQty, token, this, 8000000000000000000000000000000000000000000000000000000000000000, 0, 0x0000000000000000000000000000000000000000, PERM_HINT) = 1\n    owner = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "79.7"
+}

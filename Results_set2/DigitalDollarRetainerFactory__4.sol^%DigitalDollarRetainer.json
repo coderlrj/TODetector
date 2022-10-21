@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__4.sol:81:1: Warning: Integer Overflow.\nusdc.transferFrom(msg.sender, provider, weiAmount)\nInteger Overflow occurs if:\n    client = 0\n    payCap = 2147549184", 
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__4.sol:70:1: Warning: Integer Overflow.\ndai.transferFrom(msg.sender, provider, weiAmount)\nInteger Overflow occurs if:\n    client = 0\n    payCap = 2147549184", 
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__4.sol:61:1: Warning: Integer Overflow.\nreturn terms\nInteger Overflow occurs if:\n    return terms = 115792089237316195423570985008687907853269984665640564034735217525043484426239"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__4.sol:56:1: Warning: Integer Underflow.\nfunction getTerms() // **getter function to facilitate factory calls**\n^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return terms = 65", 
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__4.sol:61:1: Warning: Integer Underflow.\nreturn terms\nInteger Underflow occurs if:\n    return terms = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.4"
+}

@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/RNCToken.sol:134:13: Warning: Integer Overflow.\n            spender.receiveApproval(msg.sender, _value, this, _extraData)", 
+   "/oyente/oyente/test/ContractCodeBalance/RNCToken.sol:129:5: Warning: Integer Overflow.\n    function approveAndCall(address _spender, uint256 _value, bytes _extraData)\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/RNCToken.sol:167:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    allowance[_from][msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0\n    balanceOf[_from] = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/RNCToken.sol:217:9: Warning: Integer Underflow.\n        totalSupply -= mintedAmount\nInteger Underflow occurs if:\n    mintedAmount = 1\n    owner = 0\n    balanceOf[target] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/RNCToken.sol:149:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    balanceOf[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "70.8"
+}

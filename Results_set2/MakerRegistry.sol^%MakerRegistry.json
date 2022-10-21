@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:154:5: Warning: Integer Overflow.\n    mapping (address => Collateral) public collaterals", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:194:39: Warning: Integer Overflow.\n        delete collateralTokensByIlks[collaterals[_token].ilk\nInteger Overflow occurs if:\n    owner = 0\n    collaterals[_token].exists = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:211:19: Warning: Integer Overflow.\n        _tokens = new address[](tokens.length)\nInteger Overflow occurs if:\n    tokens.length = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:223:16: Warning: Integer Overflow.\n        _ilk = collaterals[_token].ilk", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:3:56: Warning: Integer Overflow.\n// This program is free software: you can redistribute it and\nInteger Overflow occurs if:\n    tokens.length = 3618502788666131106986593281521497120414687020801267626233049500247285301243", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:210:5: Warning: Integer Overflow.\n    function getCollateralTokens() external view returns (address[] memory _tokens) {\n    ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    tokens.length = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:231:17: Warning: Integer Overflow.\n        _join = collaterals[address(_token)].join"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/MakerRegistry.sol:210:5: Warning: Integer Underflow.\n    function getCollateralTokens() external view returns (address[] memory _tokens) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    tokens.length = 0"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "62.7"
+}

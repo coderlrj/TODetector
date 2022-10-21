@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:137:9: Warning: Integer Overflow.\n        vaults[vault] = Actor(name,true)\nInteger Overflow occurs if:\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:144:9: Warning: Integer Overflow.\n        vaults[vault] = Actor(bytes32(0),false)\nInteger Overflow occurs if:\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:158:16: Warning: Integer Overflow.\n        return vaults[account].enrolled", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:129:9: Warning: Integer Overflow.\n        signees[signee] = Actor(bytes32(0),false)\nInteger Overflow occurs if:\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:110:5: Warning: Integer Overflow.\n    mapping (address => Actor) public signees", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:122:9: Warning: Integer Overflow.\n        signees[signee] = Actor(name,true)\nInteger Overflow occurs if:\n    _owner = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:151:16: Warning: Integer Overflow.\n        return signees[account].enrolled", 
+   "/oyente/oyente/test/ContractCodeBalance/GovernanceRegistry.sol:115:5: Warning: Integer Overflow.\n    mapping (address => Actor) public vaults"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "99.8"
+}

@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__2.sol:45:1: Warning: Integer Overflow.\ndai.transferFrom(msg.sender, provider, weiAmount)\nInteger Overflow occurs if:\n    client = 0\n    deliverableRate = 0\n    paid = 1\n    payCap = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/DigitalDollarRetainerFactory__2.sol:56:1: Warning: Integer Overflow.\nusdc.transferFrom(msg.sender, provider, weiAmount)\nInteger Overflow occurs if:\n    client = 0\n    deliverableRate = 0\n    paid = 1\n    payCap = 57896044618658097711785492504343953926634992332820282019728792003956564819968"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "61.3"
+}

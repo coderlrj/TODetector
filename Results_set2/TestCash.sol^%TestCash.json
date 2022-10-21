@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TestCash.sol:63:9: Warning: Integer Overflow.\n        return _name\nInteger Overflow occurs if:\n    return _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935", 
+   "/oyente/oyente/test/ContractCodeBalance/TestCash.sol:12:9: Warning: Integer Overflow.\n        require(b <= a, \"SafeMath: subtraction overflow\")\nInteger Overflow occurs if:\n    balances[msg.sender] = 0\n    _paused = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TestCash.sol:63:9: Warning: Integer Underflow.\n        return _name\nInteger Underflow occurs if:\n    return _name = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/TestCash.sol:62:5: Warning: Integer Underflow.\n    function name() public view returns (string memory) {\n    ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return _name = 65", 
+   "/oyente/oyente/test/ContractCodeBalance/TestCash.sol:67:9: Warning: Integer Underflow.\n        return _symbol\nInteger Underflow occurs if:\n    return _symbol = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "75.6"
+}

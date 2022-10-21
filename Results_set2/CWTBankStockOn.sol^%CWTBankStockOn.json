@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CWTBankStockOn.sol:91:1: Warning: Transaction-Ordering Dependency.\ninvestorAddr.transfer(investment)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CWTBankStockOn.sol:99:9: Warning: Transaction-Ordering Dependency.\n        selfdestruct(owner)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "57.0"
+}

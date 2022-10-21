@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CryptoholicAcademyDonationToken.sol:229:9: Warning: Transaction-Ordering Dependency.\n        owner.transfer(this.balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CryptoholicAcademyDonationToken.sol:235:9: Warning: Transaction-Ordering Dependency.\n        ceo.transfer(this.balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "87.4"
+}

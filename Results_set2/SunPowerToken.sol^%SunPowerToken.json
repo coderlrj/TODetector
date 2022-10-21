@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:87:17: Warning: Integer Underflow.\n        return (supply-allfrozen-balances[kcma]-balances[whitelist]\nInteger Underflow occurs if:\n    allfrozen = 115792089237316195423570985008687907853269984665640564039457584007913129637984\n    balances[whitelist] = 83076749736557242056487941267523489\n    balances[kcma] = 115792089237316195423570985008687907853269901588890827482215527519971862118400\n    supply = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:190:22: Warning: Integer Underflow.\n\t\tuint timeinterests=now-freezetime[msg.sender]\nInteger Underflow occurs if:\n    freezetime[msg.sender] = 1\n    balances[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    tokens = 1\n    frozen[msg.sender] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:87:17: Warning: Integer Underflow.\n        return (supply-allfrozen-balances[kcma]\nInteger Underflow occurs if:\n    allfrozen = 115792089237316195423570985008687907853269963896453129900147069885927812759556\n    balances[kcma] = 20769187434139310514121985316880381\n    supply = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:87:17: Warning: Integer Underflow.\n        return (supply-allfrozen\nInteger Underflow occurs if:\n    allfrozen = 1\n    supply = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:151:6: Warning: Integer Underflow.\n\t\t\t\t\tsupply-=balances[kcma]\nInteger Underflow occurs if:\n    supply = 0\n    kcma = 0\n    balances[kcma] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/SunPowerToken.sol:149:6: Warning: Integer Underflow.\n\t\t\t\t\tsupply-=_burn\nInteger Underflow occurs if:\n    supply = 0\n    kcma = 0\n    balances[kcma] = 57896044618658097711785492504343953926634992332820282019728792003956564819968"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "64.0"
+}

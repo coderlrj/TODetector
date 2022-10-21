@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/BebTreasure.sol:57:9: Warning: Integer Overflow.\n        bebTokenTransfer.transferFrom(_addr,address(this),sumAmount)\nInteger Overflow occurs if:\n    totalNumber = 1\n    totalFraction = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    _fraction = 0\n    fractionAmount = 0\n    _amount = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "76.1"
+}

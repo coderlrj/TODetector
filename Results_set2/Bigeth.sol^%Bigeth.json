@@ -1,0 +1,38 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:178:22: Warning: Integer Overflow.\n                emit WithdrawEther(msg.sender, amount)\nInteger Overflow occurs if:\n    blockeds[msg.sender] = 0\n    rules[_role][_to] = 0\n    investors[msg.sender].invested = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:130:13: Warning: Integer Overflow.\n            require(msg.data.length > 0, \"Send the address in data\")\nInteger Overflow occurs if:\n    rules[_role][_to] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:86:5: Warning: Integer Overflow.\n    mapping(address => Investor) public investors", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:88:5: Warning: Integer Overflow.\n    mapping(address => Admin) public admins", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:132:28: Warning: Integer Overflow.\n            address addr = bytesToAddress(msg.data)\nInteger Overflow occurs if:\n    rules[_role][_to] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:20:9: Warning: Integer Overflow.\n        require(b <= a, \"NaN\")\nInteger Overflow occurs if:\n    investors[_to].last_payout = 1\n    investors[msg.sender].invested = 1\n    rules[_role][_to] = 0\n    blockeds[msg.sender] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:48:5: Warning: Integer Overflow.\n    function hasRole(string _role, address _to) view public returns(bool) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:188:18: Warning: Integer Overflow.\n            emit Deposit(msg.sender, msg.value)\nInteger Overflow occurs if:\n    rules[_role][_to] = 0\n    investors[msg.sender].invested = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:185:13: Warning: Integer Overflow.\n            investors[msg.sender].last_payout\nInteger Overflow occurs if:\n    rules[_role][_to] = 0\n    investors[msg.sender].invested = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:183:13: Warning: Integer Overflow.\n            require(msg.value >= 0.01 ether, \"Minimum investment amount 0.01 ether\")\nInteger Overflow occurs if:\n    rules[_role][_to] = 0\n    investors[msg.sender].invested = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:49:9: Warning: Integer Overflow.\n        require(_to != address(0), \"Zero address\")"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:10:15: Warning: Integer Underflow.\n        return c;\n        ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:183:13: Warning: Integer Underflow.\n            require(msg.value >= 0.01 ether, \"Minimum investment amount 0.01 ether\")\nInteger Underflow occurs if:\n    rules[_role][_to] = 0\n    investors[msg.sender].invested = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:51:16: Warning: Integer Underflow.\n        return rules[_role]", 
+   "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:20:9: Warning: Integer Underflow.\n        require(b <= a, \"NaN\")\nInteger Underflow occurs if:\n    rules[_role][_to] = 0\n    investors[_to].last_payout = 1\n    blockeds[msg.sender] = 0\n    investors[msg.sender].invested = 1"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:176:17: Warning: Transaction-Ordering Dependency.\n                msg.sender.transfer(amount)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Bigeth.sol:176:17: Warning: Transaction-Ordering Dependency.\n                msg.sender.transfer(amount)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "63.3"
+}

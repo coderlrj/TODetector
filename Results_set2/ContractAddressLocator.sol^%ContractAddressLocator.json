@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ContractAddressLocator.sol:86:55: Warning: Integer Overflow.\n            if (_contractAddress == contractAddresses[_identifiers[i]\nInteger Overflow occurs if:\n    identifiersCount = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    contractAddresses[_identifiers[i]] = 0\n    _identifiers = 115792089237316195423570985008687907853269984665640564039457584007913129639868\n    _contractAddress = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "99.6"
+}

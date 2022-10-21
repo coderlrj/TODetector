@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LSD.sol:132:46: Warning: Integer Overflow.\n        require(_spender.call(bytes4(bytes32(keccak256(\"receiveApproval(address,uint256,address,bytes)\")", 
+   "/oyente/oyente/test/ContractCodeBalance/LSD.sol:127:14: Warning: Integer Overflow.\n        emit Approval(msg.sender, _spender, _value)", 
+   "/oyente/oyente/test/ContractCodeBalance/LSD.sol:125:5: Warning: Integer Overflow.\n    function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LSD.sol:127:14: Warning: Integer Underflow.\n        emit Approval(msg.sender, _spender, _value)"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "49.6"
+}

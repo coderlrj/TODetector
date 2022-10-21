@@ -1,0 +1,40 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:797:13: Warning: Integer Overflow.\n            lots[lotId].rewardsNftFixed\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:846:19: Warning: Integer Overflow.\n        lotKind = p.lotKind", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:823:16: Warning: Integer Overflow.\n        delete lots[lotId].rewardsCutie\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:860:22: Warning: Integer Overflow.\n        expireTime = p.expireTime", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:861:19: Warning: Integer Overflow.\n        lotKind = p.lotKind", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:859:16: Warning: Integer Overflow.\n        left = p.leftCount", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:845:22: Warning: Integer Overflow.\n        expireTime = p.expireTime", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:843:17: Warning: Integer Overflow.\n        price = p.price", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:1291:21: Warning: Integer Overflow.\n        return uint(tokenRegistry.getPriceInToken(token, uint128(valueInWei))", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:832:13: Warning: Integer Overflow.\n            lot.leftCount\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1\n    paused = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:782:16: Warning: Integer Overflow.\n        delete lots[lotId].rewardsNftFixed\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:844:16: Warning: Integer Overflow.\n        left = p.leftCount", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:751:9: Warning: Integer Overflow.\n        lot.expireTime\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:1274:13: Warning: Integer Overflow.\n        if (p.leftCount\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:817:9: Warning: Integer Overflow.\n        lots[lotId].rewardsCutie\nInteger Overflow occurs if:\n    operatorAddress[_addr] = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:862:24: Warning: Integer Overflow.\n        priceInToken = p.priceInToken", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:909:13: Warning: Integer Overflow.\n        if (p.rewardsNftFixed", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:990:16: Warning: Integer Overflow.\n        return lots[lotId].rewardsCutie", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:858:17: Warning: Integer Overflow.\n        price = p.price", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:949:30: Warning: Integer Overflow.\n        for (uint i = 0; i < p.rewardsNftMint", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:1233:5: Warning: Integer Overflow.\n    function getSigner(uint rate, uint expireAt, uint8 _v, bytes32 _r, bytes32 _s) public pure returns (address)\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:981:33: Warning: Integer Overflow.\n        rewardsNFTMintNftKind = p.rewardsNftMint"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:1242:19: Warning: Integer Underflow.\n        msgHash = keccak256(abi.encode(rate, expireAt))", 
+   "/oyente/oyente/test/ContractCodeBalance/Presale__2.sol:1236:16: Warning: Integer Underflow.\n        return ecrecover(msgHash, _v, _r, _s)"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "36.5"
+}

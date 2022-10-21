@@ -1,0 +1,28 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:195:22: Warning: Callstack Depth Attack Vulnerability.\n            result = address(uint160(referrer)).send(msg.value)"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:154:22: Warning: Integer Overflow.\n             require(users[msg.sender].expiring\nInteger Overflow occurs if:\n    users[msg.sender].isExist = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:214:9: Warning: Integer Overflow.\n        address[] memory referral = users[user].referral\nInteger Overflow occurs if:\n    users[userList[referrerID]].referral.length = 3618502788666131106986593281521497120414687020801267626233049500247285301247\n    users[referrer].id = 1\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:157:13: Warning: Integer Overflow.\n        if (users[msg.sender].expiring\nInteger Overflow occurs if:\n    users[msg.sender].isExist = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:118:16: Warning: Integer Overflow.\n        user = Util.User({\n        ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    users[userList[referrerID]].referral.length = 0\n    users[referrer].id = 1\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 14474011154664524427946373126085988481658748083205070504932198000989141204992", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:214:37: Warning: Integer Overflow.\n        address[] memory referral = users[user].referral\nInteger Overflow occurs if:\n    users[userList[referrerID]].referral.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 1\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:95:17: Warning: Integer Overflow.\n                revert('01 wrong referrer')\nInteger Overflow occurs if:\n    users[referrer].isExist = 0\n    users[msg.sender].isExist = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:93:30: Warning: Integer Overflow.\n                referrerID = users[referrer].id\nInteger Overflow occurs if:\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:106:9: Warning: Integer Overflow.\n        require(referrerID > 0 && referrerID <= userIDCounter, '0x04 wrong referrer ID')\nInteger Overflow occurs if:\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    users[referrer].id = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:110:13: Warning: Integer Overflow.\n        if (users[userList[referrerID]].referral\nInteger Overflow occurs if:\n    users[referrer].id = 1\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 57896044618658097711785492504343953926634992332820282019728792003956564819968", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:27:1: Warning: Integer Overflow.\ncontract IOCrypto {\n^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    users[userList[referrerID]].referral.length = 0\n    users[referrer].id = 1\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 14474011154664524427946373126085988481658748083205070504932198000989141204992", 
+   "/oyente/oyente/test/ContractCodeBalance/IOCrypto.sol:116:9: Warning: Integer Overflow.\n        userIDCounter++\nInteger Overflow occurs if:\n    users[userList[referrerID]].referral.length = 0\n    users[referrer].id = 115792089237316195423570985008687907853269984665640564039457584007913129639934\n    users[referrer].isExist = 1\n    users[msg.sender].isExist = 0\n    userIDCounter = 115792089237316195423570985008687907853269984665640564039457584007913129639935"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "18.5"
+}

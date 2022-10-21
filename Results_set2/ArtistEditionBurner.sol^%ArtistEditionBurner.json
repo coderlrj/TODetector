@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ArtistEditionBurner.sol:234:5: Warning: Integer Overflow.\n    require(isActive, \"Only when edition is active\")\nInteger Overflow occurs if:\n    paused = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/ArtistEditionBurner.sol:230:5: Warning: Integer Overflow.\n    require(msg.sender == artistAccount || msg.sender == owner, \"Only from the edition artist account\")\nInteger Overflow occurs if:\n    paused = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "73.9"
+}

@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KOKContract.sol:106:9: Warning: Integer Overflow.\n\t\t\temit RejectedPaymentToBlacklistedAddr(msg.sender, _to, _value)\nInteger Overflow occurs if:\n    owner = 0\n    balances[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    blackList[_to] = 1\n    blackList[msg.sender] = 0\n    balances[_to[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOKContract.sol:102:9: Warning: Integer Overflow.\n\t\t\temit RejectedPaymentFromBlacklistedAddr(msg.sender, _to, _value)\nInteger Overflow occurs if:\n    owner = 0\n    balances[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    blackList[msg.sender] = 1\n    balances[_to[i]] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOKContract.sol:112:8: Warning: Integer Overflow.\n\t\temit Transfer(msg.sender, _to, _value)\nInteger Overflow occurs if:\n    owner = 0\n    balances[msg.sender] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    blackList[_to] = 0\n    blackList[msg.sender] = 0\n    balances[_to[i]] = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.3"
+}

@@ -1,0 +1,26 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:200:15: Warning: Integer Overflow.\n    }else if (missionList[_missionId].refuseSuperNodes\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 0\n    _agree = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:226:23: Warning: Integer Overflow.\n        usdt.transfer(offeringList[_missionId][m]\nInteger Overflow occurs if:\n    missionList[_missionId].done = 4294967296\n    owner = 0\n    dealTime = 0\n    offeringList[_missionId].length = 2\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].offeringAmount = 0\n    missionList[_missionId].totalAmount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:187:9: Warning: Integer Overflow.\n    if (missionList[_missionId].totalAmount\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:153:35: Warning: Integer Overflow.\n    emit MissionPassed(_missionId,missionList[_missionId].name\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 32768\n    _agree = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:201:9: Warning: Integer Overflow.\n        missionList[_missionId].done\nInteger Overflow occurs if:\n    _agree = 1\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 2147483648", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:231:5: Warning: Integer Overflow.\n    missionList[_missionId].done\nInteger Overflow occurs if:\n    missionList[_missionId].done = 4294967296\n    owner = 0\n    dealTime = 1\n    missionList[_missionId].endTime = 0\n    offeringList[_missionId].length = 0\n    missionList[_missionId].offeringAmount = 0\n    missionList[_missionId].totalAmount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:198:9: Warning: Integer Overflow.\n        missionList[_missionId].superPassed\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 32768\n    _agree = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:197:9: Warning: Integer Overflow.\n    if (missionList[_missionId].agreeSuperNodes\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 0\n    _agree = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:232:38: Warning: Integer Overflow.\n    emit OfferingFinished(_missionId,missionList[_missionId].offeringAmount\nInteger Overflow occurs if:\n    missionList[_missionId].done = 4294967296\n    owner = 0\n    dealTime = 0\n    missionList[_missionId].endTime = 1\n    offeringList[_missionId].length = 0\n    missionList[_missionId].offeringAmount = 0\n    missionList[_missionId].totalAmount = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:195:7: Warning: Integer Overflow.\n      missionList[_missionId].refuseSuperNodes\nInteger Overflow occurs if:\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 0\n    _agree = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/KOLUSDTFund.sol:192:7: Warning: Integer Overflow.\n      missionList[_missionId].agreeSuperNodes\nInteger Overflow occurs if:\n    _agree = 1\n    Voter[msg.sender][_missionId] = 0\n    missionList[_missionId].totalAmount = 0\n    missionList[_missionId].endTime = 1\n    missionList[_missionId].isKol = 0\n    missionList[_missionId].done = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "37.4"
+}

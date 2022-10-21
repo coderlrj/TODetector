@@ -1,0 +1,42 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1456:28: Warning: Callstack Depth Attack Vulnerability.\n        (bool success, ) = _member.call.value(amount_wei).gas(53000)(\"\")"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1478:12: Warning: Integer Overflow.\n        if(members[user].cycle\nInteger Overflow occurs if:\n    members[user].cycle = 5192296858534827628530496329220096", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1483:20: Warning: Integer Overflow.\n                && members[user].can_retopup\nInteger Overflow occurs if:\n    new_cycle = 128\n    members[user].cycle = 659421701033923108823373033810952192", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1541:16: Warning: Integer Overflow.\n            if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 2535301200456458802993406410752\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1475:12: Warning: Integer Overflow.\n        if(members[user].cycle", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1530:21: Warning: Integer Overflow.\n            else if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 356811923176489970264571492362373784095686656\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1534:21: Warning: Integer Overflow.\n            else if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 356811923176489970264571492362373784095686656\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1481:21: Warning: Integer Overflow.\n                || (members[user].cycle\nInteger Overflow occurs if:\n    new_cycle = 128\n    members[user].cycle = 5192296858534827628530496329220096", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1613:9: Warning: Integer Overflow.\n        members[_address].can_retopup\nInteger Overflow occurs if:\n    handler = 0\n    members[_address].cycle = 5192296858534827628530496329220096", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1549:21: Warning: Integer Overflow.\n            else if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 2535301200456458802993406410752\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1603:9: Warning: Integer Overflow.\n        members[_address].pending_earnings\nInteger Overflow occurs if:\n    handler = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1545:21: Warning: Integer Overflow.\n            else if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 2535301200456458802993406410752\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1480:18: Warning: Integer Overflow.\n                (members[user].cycle\nInteger Overflow occurs if:\n    members[user].cycle = 5192296858534827628530496329220096", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1604:9: Warning: Integer Overflow.\n        members[_address].left_leg\nInteger Overflow occurs if:\n    handler = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1526:16: Warning: Integer Overflow.\n            if(members[msg.sender].cycle\nInteger Overflow occurs if:\n    sponsor = 1\n    currency = 356811923176489970264571492362373784095686656\n    members[sponsor].cycle = 5192296858534827628530496329220096\n    members[msg.sender].cycle = 0\n    same_cycle = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1602:9: Warning: Integer Overflow.\n        members[_address].earnings\nInteger Overflow occurs if:\n    handler = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1480:42: Warning: Integer Underflow.\n                (members[user].cycle == (new_cycle - 1\nInteger Underflow occurs if:\n    new_cycle = 0\n    members[user].cycle = 5192296858534827628530496329220096", 
+   "/oyente/oyente/test/ContractCodeBalance/Game.sol:1439:9: Warning: Integer Underflow.\n        members[_member].pending_earnings -= withdrawal_amount\nInteger Underflow occurs if:\n    handler = 0\n    currency = 1\n    MINIMUM_WITHDRAW = 1152921504606872832\n    amount = 190277084256403457\n    members[_member].pending_earnings = 9223372036854775808"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Game.sol:1494:9: Warning: Transaction-Ordering Dependency.\n        handler.transfer(_amount)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Game.sol:1498:9: Warning: Transaction-Ordering Dependency.\n        selfdestruct(handler)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "49.3"
+}

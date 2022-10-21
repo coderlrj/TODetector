@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/flashIt__17.sol:204:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.send(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/flashIt__17.sol:197:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.send(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "52.3"
+}

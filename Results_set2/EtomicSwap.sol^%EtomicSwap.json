@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCodeBalance/EtomicSwap.sol:186:9: Warning: Timestamp Dependency.\n        require(paymentHash == payments[_id].paymentHash && now >= payments[_id].lockTime)"
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/EtomicSwap.sol:202:14: Warning: Integer Overflow.\n        emit SenderRefunded(_id)\nInteger Overflow occurs if:\n    _tokenAddress = 1\n    payments[_id].state = 26959946667150639796128516724350533591840829255256855500759542792193\n    _isLegacyToken = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "58.9"
+}

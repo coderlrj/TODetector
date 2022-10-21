@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/TokenBaseAsset.sol:35:2: Warning: Integer Overflow.\n\tfunction getToken(string pDocumentHash) view public returns(string) {\n\t^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    pDocumentHash = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/TokenBaseAsset.sol:25:2: Warning: Integer Overflow.\n\tfunction addToken(string pDocumentHash, string pDocumentToken) public {\n\t^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    pDocumentHash = 115792089237316195423570985008687907853269984665640564039457584007913129639932"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "26.5"
+}

@@ -1,0 +1,36 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:222:3: Warning: Integer Overflow.\n  function requiredSignatures() public view returns(uint256) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:208:3: Warning: Integer Overflow.\n  function validatorCount() public view returns(uint256) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:201:56: Warning: Integer Overflow.\n  bytes32 internal constant IS_INITIALIZED = keccak256(abi.encodePacked(\"isInitialized\")", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:230:3: Warning: Integer Overflow.\n  function deployedAtBlock() public view returns(uint256) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:57:5: Warning: Integer Overflow.\n    function owner() public view returns (address) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:226:3: Warning: Integer Overflow.\n  function isInitialized() public view returns(bool) {\n  ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:205:5: Warning: Integer Overflow.\n    return addressArrayStorage[VALIDATORS]\nInteger Overflow occurs if:\n    return addressArrayStorage[VALIDATORS] = 3618502788666131106986593281521497120414687020801267626233049500247285301247", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:201:46: Warning: Integer Overflow.\n  bytes32 internal constant IS_INITIALIZED = keccak256(abi.encodePacked(\"isInitialized\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:58:41: Warning: Integer Overflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\")\nInteger Overflow occurs if:\n    addressStorage[keccak256(abi.encodePacked(\"owner\"))] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:199:52: Warning: Integer Overflow.\n  bytes32 internal constant VALIDATORS = keccak256(abi.encodePacked(\"validators\")\nInteger Overflow occurs if:\n    addressArrayStorage[VALIDATORS].length = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:172:3: Warning: Integer Overflow.\n  function initialize(address[] _initialValidators, address _foreignBridge) public returns (bool) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    _initialValidators = 115792089237316195423570985008687907853269984665640564039457584007913129639932", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:212:3: Warning: Integer Overflow.\n  function isValidator(address _address) public view returns(bool) {\n  ^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    addressArrayStorage[VALIDATORS].length = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:1:27: Warning: Integer Underflow.\n", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:201:46: Warning: Integer Underflow.\n  bytes32 internal constant IS_INITIALIZED = keccak256(abi.encodePacked(\"isInitialized\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:202:49: Warning: Integer Underflow.\n  bytes32 internal constant DEPLOYED_AT_BLOCK = keccak256(abi.encodePacked(\"deployedAtBlock\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:199:42: Warning: Integer Underflow.\n  bytes32 internal constant VALIDATORS = keccak256(abi.encodePacked(\"validators\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:58:31: Warning: Integer Underflow.\n        return addressStorage[keccak256(abi.encodePacked(\"owner\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:200:51: Warning: Integer Underflow.\n  bytes32 internal constant REQUIRED_SIGNATURES = keccak256(abi.encodePacked(\"requiredSignatures\"))", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:1:23: Warning: Integer Underflow.\n", 
+   "/oyente/oyente/test/ContractCodeBalance/ForeignBridgeValidators.sol:11:4: Warning: Integer Underflow.\n    mapping(bytes32 => uint256) i"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "45.2"
+}

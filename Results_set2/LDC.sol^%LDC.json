@@ -1,0 +1,25 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LDC.sol:51:9: Warning: Integer Overflow.\n        lockedBalances[_who][1]\nInteger Overflow occurs if:\n    owner = 0\n    _value = 1\n    balances[_who] = 57896044618658097711785492504343953926634992332820282019728792003956564819968"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/LDC.sol:48:9: Warning: Integer Underflow.\n        totalSupply -= _value\nInteger Underflow occurs if:\n    owner = 0\n    _value = 1\n    balances[_who] = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    totalSupply = 0"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/LDC.sol:65:9: Warning: Transaction-Ordering Dependency.\n        msg.sender.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/LDC.sol:69:9: Warning: Transaction-Ordering Dependency.\n        address(_to).transfer(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "66.2"
+}

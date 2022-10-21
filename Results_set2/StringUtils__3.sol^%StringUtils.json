@@ -1,0 +1,18 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/StringUtils__3.sol:74:5: Warning: Integer Overflow.\n    function compare(string _a, string _b) returns (int) {\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/StringUtils__3.sol:97:5: Warning: Integer Overflow.\n    function indexOf(string _haystack, string _needle) returns (int)\n    ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCodeBalance/StringUtils__3.sol:93:5: Warning: Integer Overflow.\n    function equal(string _a, string _b) returns (bool) {\n    ^\nSpanning multiple lines."
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "38.3"
+}

@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CoinAtc.sol:387:9: Warning: Transaction-Ordering Dependency.\n        direct_drop_withdraw_address.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/CoinAtc.sol:387:9: Warning: Transaction-Ordering Dependency.\n        direct_drop_withdraw_address.transfer(address(this).balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "69.4"
+}

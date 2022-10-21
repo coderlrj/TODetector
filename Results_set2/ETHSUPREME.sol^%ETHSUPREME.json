@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/ETHSUPREME.sol:98:61: Warning: Integer Overflow.\n\t\t\tuint profit = user.investment.mul(secondsGone).mul(rates[user.tier\nInteger Overflow occurs if:\n    startDate = 1\n    minDeposit = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/ETHSUPREME.sol:34:2: Warning: Integer Overflow.\n\tmapping (address => User) public users", 
+   "/oyente/oyente/test/ContractCodeBalance/ETHSUPREME.sol:94:27: Warning: Integer Overflow.\n\t\tif (secondsGone == 0 || user.timestamp\nInteger Overflow occurs if:\n    minDeposit = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/ETHSUPREME.sol:96:4: Warning: Integer Overflow.\n\t\t\tuser.timestamp\nInteger Overflow occurs if:\n    startDate = 3\n    minDeposit = 1"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "42.6"
+}

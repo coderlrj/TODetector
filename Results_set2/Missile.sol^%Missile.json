@@ -1,0 +1,22 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:67:5: Warning: Integer Overflow.\n    return _Tokensymbol\nInteger Overflow occurs if:\n    return _Tokensymbol = 115792089237316195423570985008687907853269984665640564039457584007913129639935", 
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:63:5: Warning: Integer Overflow.\n    return _Tokenname\nInteger Overflow occurs if:\n    return _Tokenname = 115792089237316195423570985008687907853269984665640564030012851042173839212543"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:63:5: Warning: Integer Underflow.\n    return _Tokenname\nInteger Underflow occurs if:\n    return _Tokenname = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:62:3: Warning: Integer Underflow.\n  function name() public view returns(string memory) {\n  ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return _Tokenname = 65", 
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:66:3: Warning: Integer Underflow.\n  function symbol() public view returns(string memory) {\n  ^\nSpanning multiple lines.\nInteger Underflow occurs if:\n    return _Tokensymbol = 65", 
+   "/oyente/oyente/test/ContractCodeBalance/Missile.sol:67:5: Warning: Integer Underflow.\n    return _Tokensymbol\nInteger Underflow occurs if:\n    return _Tokensymbol = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "74.1"
+}

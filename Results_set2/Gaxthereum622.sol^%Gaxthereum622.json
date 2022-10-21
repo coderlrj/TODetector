@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Gaxthereum622.sol:64:12: Warning: Transaction-Ordering Dependency.\n           owner.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCodeBalance/Gaxthereum622.sol:61:17: Warning: Transaction-Ordering Dependency.\n                owner.transfer(_price)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "89.7"
+}

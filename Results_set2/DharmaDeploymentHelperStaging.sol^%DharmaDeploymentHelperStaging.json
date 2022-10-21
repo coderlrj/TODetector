@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/DharmaDeploymentHelperStaging.sol:69:24: Warning: Callstack Depth Attack Vulnerability.\n    (ok, returnData) = smartWallet.call(data)", 
+   "/oyente/oyente/test/ContractCodeBalance/DharmaDeploymentHelperStaging.sol:82:24: Warning: Callstack Depth Attack Vulnerability.\n    (ok, returnData) = smartWallet.call(data)"
+  ], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "1.4"
+}

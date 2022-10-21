@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:465:5: Warning: Integer Overflow.\n    orderBook[orderId] = Order(owner, true, sellToken, buyToken, ring, amount, priceMul, priceDiv)\nInteger Overflow occurs if:\n    etherAddress = 1\n    priceDiv = 1\n    buyToken = 0\n    priceMul = 1\n    rentrancy_lock = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:284:12: Warning: Integer Overflow.\n    return orderBook[orderId].amount", 
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:303:9: Warning: Integer Overflow.\n    if (order.sellToken", 
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:291:9: Warning: Integer Overflow.\n    if (order.sellToken\nInteger Overflow occurs if:\n    desiredSellTokenAmount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:595:7: Warning: Integer Overflow.\n      ERC20(tkn).transfer(destination, amount)\nInteger Overflow occurs if:\n    etherAddress = 0\n    saturnToken = 1\n    admin = 0\n    tradeMiningBalance = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/Exchange__3.sol:464:15: Warning: Integer Overflow.\n    orderId = orderCount++\nInteger Overflow occurs if:\n    value = 1\n    rentrancy_lock = 0\n    orderCount = 115792089237316195423570985008687907853269984665640564039457584007913129639935"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "53.8"
+}

@@ -1,0 +1,20 @@
+{
+ "vulnerabilities": {
+  "callstack": [
+   "/oyente/oyente/test/ContractCodeBalance/Simple_FOMO_Round_2.sol:139:20: Warning: Callstack Depth Attack Vulnerability.\n    bool sentfee = feeAddress.send(feeAmount)"
+  ], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCodeBalance/Simple_FOMO_Round_2.sol:76:5: Warning: Timestamp Dependency.\n    require (currentTime > claimTime)"
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/Simple_FOMO_Round_2.sol:111:5: Warning: Integer Overflow.\n    entryAmount++\nInteger Overflow occurs if:\n    deadline = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    entryAmountList[msg.sender] = 115792089237316195423570985008687907853269984665640564039457584007913129639935\n    entryCost = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.6"
+}

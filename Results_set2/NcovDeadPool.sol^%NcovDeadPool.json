@@ -1,0 +1,19 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/NcovDeadPool.sol:63:13: Warning: Integer Overflow.\n            bets[msg.sender] = Bet({amount:0, day:0, infections:0})\nInteger Overflow occurs if:\n    bets[msg.sender].infections = 57896044605178124378210172607010446383125176996001709732900642037490436276473\n    bets[msg.sender].amount = 1", 
+   "/oyente/oyente/test/ContractCodeBalance/NcovDeadPool.sol:29:5: Warning: Integer Overflow.\n    mapping(address => Bet) public bets"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCodeBalance/NcovDeadPool.sol:25:21: Warning: Integer Underflow.\n        uint256 c = a - b\nInteger Underflow occurs if:\n    bets[msg.sender].infections = 84425687000967572872821081286270580326583309845150026086114212630143329894401\n    bets[msg.sender].amount = 1"
+  ], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.0"
+}

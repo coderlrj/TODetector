@@ -1,0 +1,22 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:10:1: Warning: Integer Overflow.\ncontract CryptoDaysMicro {\n^\nSpanning multiple lines.\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 1\n    currentUserID = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[userAddresses[_referrerID]].referrals.length = 0\n    REFERRALS_LIMIT = 1\n    users[msg.sender].id = 0\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:245:12: Warning: Integer Overflow.\n    return User({ id: currentUserID, referrerID: _referrerID, referrals: new address[](0) })\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 1\n    currentUserID = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[userAddresses[_referrerID]].referrals.length = 0\n    REFERRALS_LIMIT = 1\n    users[msg.sender].id = 0\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:170:7: Warning: Integer Overflow.\n      users[msg.sender].levelExpiresAt\nInteger Overflow occurs if:\n    levelPrice[i] = 0\n    levelPrice[i] = 1\n    levelPrice[i] = 0\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[msg.sender].id = 1\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:178:9: Warning: Integer Overflow.\n    if (users[_user].referrals\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 1\n    currentUserID = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[userAddresses[_referrerID]].referrals.length = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    REFERRALS_LIMIT = 1\n    users[msg.sender].id = 0\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:150:5: Warning: Integer Overflow.\n    currentUserID++\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 115792089237316195423570985008687907853269984665640564039457584007913129639934\n    currentUserID = 115792089237316195423570985008687907853269984665640564039457584007913129639935\n    users[userAddresses[_referrerID]].referrals.length = 0\n    REFERRALS_LIMIT = 1\n    users[msg.sender].id = 0\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:146:9: Warning: Integer Overflow.\n    if (users[userAddresses[_referrerID]].referrals\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 1\n    currentUserID = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[msg.sender].id = 0\n    levelPrice[i] = 0", 
+   "/oyente/oyente/test/ContractCodeBalance/CryptoDaysMicro.sol:48:5: Warning: Integer Overflow.\n    require(_referrerID > 0 && _referrerID <= currentUserID, 'Invalid referrer ID')\nInteger Overflow occurs if:\n    MAX_LEVEL = 57896044618658097711785492504343953926634992332820282019728792003956564819968\n    users[referrer].id = 0\n    users[msg.sender].id = 0\n    levelPrice[i] = 0"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "17.3"
+}
