@@ -1,0 +1,21 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCode/fllback_outofgas.sol:9:10: Warning: Transaction-Ordering Dependency.\n\t        aa[i].transfer(1 ether)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCode/fllback_outofgas.sol:9:10: Warning: Transaction-Ordering Dependency.\n\t        aa[i].transfer(1 ether)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "97.0"
+}

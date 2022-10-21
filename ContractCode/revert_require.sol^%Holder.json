@@ -1,0 +1,24 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCode/revert_require.sol:11:9: Warning: Timestamp Dependency.\n        if (now < holdUntil){\n        ^\nSpanning multiple lines.", 
+   "/oyente/oyente/test/ContractCode/revert_require.sol:18:9: Warning: Timestamp Dependency.\n        if (now < holdUntil){\n        ^\nSpanning multiple lines."
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCode/revert_require.sol:14:9: Warning: Transaction-Ordering Dependency.\n        holder.transfer(this.balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCode/revert_require.sol:21:9: Warning: Transaction-Ordering Dependency.\n        holder.transfer(this.balance)"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "81.3"
+}

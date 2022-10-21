@@ -1,0 +1,28 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [
+   "/oyente/oyente/test/ContractCode/test_1.sol:127:2: Warning: Re-Entrancy Vulnerability.\n\towner.call.value(1 wei)()"
+  ], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCode/test_1.sol:66:2: Warning: Integer Overflow.\n\tplayers.push(msg.sender)\nInteger Overflow occurs if:\n    players.push(msg.sender) = 115792089237316195423570985008687907853269984665640564039457584007913129639935", 
+   "/oyente/oyente/test/ContractCode/test_1.sol:113:27: Warning: Integer Overflow.\n\treturn (_seed / (seed[0]*seed[1]\nInteger Overflow occurs if:\n    approvedPlayers[msg.sender] = 1\n    seed[1] = 2"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [
+   "/oyente/oyente/test/ContractCode/test_1.sol:81:30: Warning: Integer Underflow.\n    bytes32 hash = keccak256(block.number-1\nInteger Underflow occurs if:\n    owner = 0\n    approvedPlayers[msg.sender] = 1"
+  ], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCode/test_1.sol:131:2: Warning: Transaction-Ordering Dependency.\n\twinner.transfer(address(this).balance)"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCode/test_1.sol:127:2: Warning: Transaction-Ordering Dependency.\n\towner.call.value(1 wei)()"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "73.3"
+}

@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [
+   "/oyente/oyente/test/ContractCode/reentrancy_eth_1.sol:9:9: Warning: Re-Entrancy Vulnerability.\n\t\tif (!(recipient.call.value(amountToWithdraw)()"
+  ], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "79.0"
+}

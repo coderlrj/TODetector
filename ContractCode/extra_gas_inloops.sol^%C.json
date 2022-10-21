@@ -1,0 +1,17 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [
+   "/oyente/oyente/test/ContractCode/extra_gas_inloops.sol:12:13: Warning: Integer Overflow.\n\t\t\tuint c = aa[a]\nInteger Overflow occurs if:\n    aa[a] = 2", 
+   "/oyente/oyente/test/ContractCode/extra_gas_inloops.sol:6:13: Warning: Integer Overflow.\n\t\t\tuint c = aa[a]\nInteger Overflow occurs if:\n    aa.length = 2"
+  ], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "88.0"
+}

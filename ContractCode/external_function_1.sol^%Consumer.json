@@ -1,0 +1,16 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [], 
+  "reentrancy": [
+   "/oyente/oyente/test/ContractCode/external_function_1.sol:15:10: Warning: Re-Entrancy Vulnerability.\n\t\treturn InfoFeed(addr).info.value(1).gas(8000)()"
+  ], 
+  "Transaction-Order-Dependence(TOD)": [], 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "98.2"
+}

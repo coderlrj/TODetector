@@ -1,0 +1,23 @@
+{
+ "vulnerabilities": {
+  "callstack": [], 
+  "time_dependency": [
+   "/oyente/oyente/test/ContractCode/test_3.sol:33:9: Warning: Timestamp Dependency.\n        if( isOwner() && now >= openDate ) {\n        ^\nSpanning multiple lines."
+  ], 
+  "reentrancy": [], 
+  "Transaction-Order-Dependence(TOD)": true, 
+  "integer_overflow": [], 
+  "parity_multisig_bug_2": [], 
+  "integer_underflow": [], 
+  "money_concurrency": [
+   [
+    "/oyente/oyente/test/ContractCode/test_3.sol:36:17: Warning: Transaction-Ordering Dependency.\n                msg.sender.send( amount )"
+   ], 
+   [
+    "/oyente/oyente/test/ContractCode/test_3.sol:42:13: Warning: Transaction-Ordering Dependency.\n            suicide( msg.sender )"
+   ]
+  ], 
+  "assertion_failure": []
+ }, 
+ "evm_code_coverage": "82.1"
+}
